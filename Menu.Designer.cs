@@ -32,7 +32,8 @@ namespace AutofactApp
             this.Clients = new System.Windows.Forms.Button();
             this.Logout = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.AjoutUtilisateur = new System.Windows.Forms.Button();
+            this.Utilisateurs = new System.Windows.Forms.Button();
+            this.ChangementMdp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Clients
@@ -67,23 +68,34 @@ namespace AutofactApp
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // AjoutUtilisateur
+            // Utilisateurs
             // 
-            this.AjoutUtilisateur.Location = new System.Drawing.Point(193, 17);
-            this.AjoutUtilisateur.Margin = new System.Windows.Forms.Padding(2);
-            this.AjoutUtilisateur.Name = "AjoutUtilisateur";
-            this.AjoutUtilisateur.Size = new System.Drawing.Size(193, 60);
-            this.AjoutUtilisateur.TabIndex = 5;
-            this.AjoutUtilisateur.Text = "Ajouter un utilisateur";
-            this.AjoutUtilisateur.UseVisualStyleBackColor = true;
-            this.AjoutUtilisateur.Click += new System.EventHandler(this.Ajoututilisateur_Click);
+            this.Utilisateurs.Location = new System.Drawing.Point(212, 17);
+            this.Utilisateurs.Margin = new System.Windows.Forms.Padding(2);
+            this.Utilisateurs.Name = "Utilisateurs";
+            this.Utilisateurs.Size = new System.Drawing.Size(193, 60);
+            this.Utilisateurs.TabIndex = 5;
+            this.Utilisateurs.Text = "La liste des utilisateurs";
+            this.Utilisateurs.UseVisualStyleBackColor = true;
+            this.Utilisateurs.Click += new System.EventHandler(this.utilisateurs_Click);
+            // 
+            // ChangementMdp
+            // 
+            this.ChangementMdp.Location = new System.Drawing.Point(422, 20);
+            this.ChangementMdp.Name = "ChangementMdp";
+            this.ChangementMdp.Size = new System.Drawing.Size(193, 60);
+            this.ChangementMdp.TabIndex = 6;
+            this.ChangementMdp.Text = "Changement de mot de passe";
+            this.ChangementMdp.UseVisualStyleBackColor = true;
+            this.ChangementMdp.Click += new System.EventHandler(this.ChangementMdp_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 446);
-            this.Controls.Add(this.AjoutUtilisateur);
+            this.Controls.Add(this.ChangementMdp);
+            this.Controls.Add(this.Utilisateurs);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Clients);
@@ -100,6 +112,7 @@ namespace AutofactApp
         private System.Windows.Forms.Button Clients;
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button AjoutUtilisateur;
+        private System.Windows.Forms.Button Utilisateurs;
+        private System.Windows.Forms.Button ChangementMdp;
     }
 }

@@ -43,10 +43,18 @@ namespace AutofactApp
             }
         }
 
-        private void Ajoututilisateur_Click(object sender, EventArgs e)
+        private void utilisateurs_Click(object sender, EventArgs e)
         {
-            Form NouvelUtilisateur = new AjoutUtilisateur();
-            NouvelUtilisateur.Show();
+            Form ListeUtilisateurs = new utilisateurs();
+            ListeUtilisateurs.Show();
+            this.Hide();
+        }
+
+        private void ChangementMdp_Click(object sender, EventArgs e)
+        {
+
+            Form ChangeMdp = new ChangementMotDePasse();
+            ChangeMdp.Show();
             this.Hide();
         }
     }

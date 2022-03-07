@@ -153,6 +153,7 @@ namespace AutofactApp
             this.Clear.TabIndex = 17;
             this.Clear.Text = "Effacer";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // NewMail
             // 
@@ -182,6 +183,7 @@ namespace AutofactApp
             this.NewMailText.Name = "NewMailText";
             this.NewMailText.Size = new System.Drawing.Size(100, 23);
             this.NewMailText.TabIndex = 13;
+            this.NewMailText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // NewTelText
             // 
@@ -189,6 +191,7 @@ namespace AutofactApp
             this.NewTelText.Name = "NewTelText";
             this.NewTelText.Size = new System.Drawing.Size(100, 23);
             this.NewTelText.TabIndex = 12;
+            this.NewTelText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // NewPrenom
             // 
@@ -218,6 +221,7 @@ namespace AutofactApp
             this.NewPrenomText.Name = "NewPrenomText";
             this.NewPrenomText.Size = new System.Drawing.Size(100, 23);
             this.NewPrenomText.TabIndex = 11;
+            this.NewPrenomText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // NewNomText
             // 
@@ -225,6 +229,7 @@ namespace AutofactApp
             this.NewNomText.Name = "NewNomText";
             this.NewNomText.Size = new System.Drawing.Size(100, 23);
             this.NewNomText.TabIndex = 10;
+            this.NewNomText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddConfirm
             // 
@@ -244,6 +249,7 @@ namespace AutofactApp
             this.idUser.Name = "idUser";
             this.idUser.Size = new System.Drawing.Size(100, 23);
             this.idUser.TabIndex = 20;
+            this.idUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.idUser.Visible = false;
             // 
             // button3

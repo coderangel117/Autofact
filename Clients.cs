@@ -78,9 +78,9 @@ namespace AutofactApp
                 cmd.Parameters.AddWithValue("@mail", NewMailText.Text);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-                        Form Menu = new Menu();
-            Menu.Show();
-            this.Hide();
+                Form Menu = new Menu();
+                Menu.Show();
+                this.Hide();
             MessageBox.Show("Customer informations Updated Successfully");
             }
             else
@@ -90,7 +90,6 @@ namespace AutofactApp
             }
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             string cs = "server=localhost;user=root;password=;database=autofact";
@@ -111,6 +110,15 @@ namespace AutofactApp
             Form ajoutClient = new AjoutClient();
             ajoutClient.Show();
             this.Hide();
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            idUser.Clear();
+            NewNomText.Clear();
+            NewPrenomText.Clear();
+            NewTelText.Clear();
+            NewMailText.Clear();
         }
     }
 }
