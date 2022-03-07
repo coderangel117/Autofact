@@ -1,0 +1,365 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BackMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="BackMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 45</value>
+  </data>
+  <data name="BackMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 40</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BackMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="BackMenu.Text" xml:space="preserve">
+    <value>Retour au menu</value>
+  </data>
+  <data name="&gt;&gt;BackMenu.Name" xml:space="preserve">
+    <value>BackMenu</value>
+  </data>
+  <data name="&gt;&gt;BackMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BackMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BackMenu.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="AddConfirm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="AddConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 329</value>
+  </data>
+  <data name="AddConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 35</value>
+  </data>
+  <data name="AddConfirm.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="AddConfirm.Text" xml:space="preserve">
+    <value>Confirmer</value>
+  </data>
+  <data name="&gt;&gt;AddConfirm.Name" xml:space="preserve">
+    <value>AddConfirm</value>
+  </data>
+  <data name="&gt;&gt;AddConfirm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddConfirm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AddConfirm.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="NewNomText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 38</value>
+  </data>
+  <data name="NewNomText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="NewNomText.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;NewNomText.Name" xml:space="preserve">
+    <value>NewNomText</value>
+  </data>
+  <data name="&gt;&gt;NewNomText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewNomText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewNomText.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="NewPrenomText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 113</value>
+  </data>
+  <data name="NewPrenomText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="NewPrenomText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;NewPrenomText.Name" xml:space="preserve">
+    <value>NewPrenomText</value>
+  </data>
+  <data name="&gt;&gt;NewPrenomText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewPrenomText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewPrenomText.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="NewNom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NewNom.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="NewNom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 38</value>
+  </data>
+  <data name="NewNom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="NewNom.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="NewNom.Text" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="&gt;&gt;NewNom.Name" xml:space="preserve">
+    <value>NewNom</value>
+  </data>
+  <data name="&gt;&gt;NewNom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewNom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewNom.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="NewPrenom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NewPrenom.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="NewPrenom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 115</value>
+  </data>
+  <data name="NewPrenom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 21</value>
+  </data>
+  <data name="NewPrenom.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="NewPrenom.Text" xml:space="preserve">
+    <value>Prenom</value>
+  </data>
+  <data name="&gt;&gt;NewPrenom.Name" xml:space="preserve">
+    <value>NewPrenom</value>
+  </data>
+  <data name="&gt;&gt;NewPrenom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewPrenom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewPrenom.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="NewMail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NewMail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="NewMail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 257</value>
+  </data>
+  <data name="NewMail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 21</value>
+  </data>
+  <data name="NewMail.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="NewMail.Text" xml:space="preserve">
+    <value>Adresse mail</value>
+  </data>
+  <data name="&gt;&gt;NewMail.Name" xml:space="preserve">
+    <value>NewMail</value>
+  </data>
+  <data name="&gt;&gt;NewMail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewMail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewMail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="NewTel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NewTel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="NewTel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 177</value>
+  </data>
+  <data name="NewTel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 21</value>
+  </data>
+  <data name="NewTel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="NewTel.Text" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="&gt;&gt;NewTel.Name" xml:space="preserve">
+    <value>NewTel</value>
+  </data>
+  <data name="&gt;&gt;NewTel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewTel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewTel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="NewMailText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 259</value>
+  </data>
+  <data name="NewMailText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="NewMailText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;NewMailText.Name" xml:space="preserve">
+    <value>NewMailText</value>
+  </data>
+  <data name="&gt;&gt;NewMailText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewMailText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewMailText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="NewTelText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 184</value>
+  </data>
+  <data name="NewTelText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="NewTelText.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;NewTelText.Name" xml:space="preserve">
+    <value>NewTelText</value>
+  </data>
+  <data name="&gt;&gt;NewTelText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewTelText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NewTelText.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Clear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Clear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 329</value>
+  </data>
+  <data name="Clear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 33</value>
+  </data>
+  <data name="Clear.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Clear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;Clear.Name" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;Clear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Clear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Clear.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AjoutClient</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AjoutClient</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

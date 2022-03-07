@@ -27,31 +27,24 @@ namespace AutofactApp
             string username, user_password;
             username = NewLoginText.Text;
             user_password = NewPassText.Text;
-            try
+            if (NewLoginText.Text != "" && NewPassText.Text != "" )
             {
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
+                MySqlCommand cmd = new MySqlCommand("insert into utilisateur(login,password) values(@login, @password)", connection);
                 connection.Open();
-                string AddQuery = "INSERT INTO utilisateur ('login', 'password')  VALUES(" + NewLoginText.Text + "," + NewPassText.Text + ")";
-                MySqlCommand cmd = new MySqlCommand(AddQuery, connection);
-                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@login", NewLoginText.Text);
                 cmd.Parameters.AddWithValue("@password", NewPassText.Text);
-                int i = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
-                    if (i != 0){
-                    MessageBox.Show(i + "Data Saved");
-                    }
-           
-                else{
-                    MessageBox.Show("Invalid login details !! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    NewPassText.Clear();
-                    NewLoginText.Clear();
-                    NewLoginText.Focus();
-                }
-            }catch{
-                MessageBox.Show("Error !! ");
+                MessageBox.Show("Vos informations d'utilisateur ont bien été ajoutées");
             }
+            else{
+                MessageBox.Show("Please enter mandatory details!");
+            }
+            Form Menu = new Menu();
+            Menu.Show();
+            this.Hide();
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -59,6 +52,13 @@ namespace AutofactApp
             NewPassText.Clear();
             NewLoginText.Clear();
             NewLoginText.Focus();
+        }
+
+        private void BackMenu_Click(object sender, EventArgs e)
+        {
+            Form Menu = new Menu();
+            Menu.Show();
+            this.Hide();
         }
     }
 }

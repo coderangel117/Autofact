@@ -13,9 +13,9 @@ namespace AutofactApp
         static void Main()
         {
 
-            string cs = "server=localhost;user=root;password=;database=autofact";
-            MySqlConnection connection = new MySqlConnection(cs);
-            connection.Open();
+           // string cs = "server=localhost;user=root;password=;database=autofact";
+            //MySqlConnection connection = new MySqlConnection(cs);
+            //connection.Open();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

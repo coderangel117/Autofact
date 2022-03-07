@@ -37,6 +37,7 @@ namespace AutofactApp
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.BackMenu = new System.Windows.Forms.Button();
+            this.AjoutClient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,11 +103,22 @@ namespace AutofactApp
             this.BackMenu.UseVisualStyleBackColor = true;
             this.BackMenu.Click += new System.EventHandler(this.BackMenu_Click);
             // 
+            // AjoutClient
+            // 
+            this.AjoutClient.Location = new System.Drawing.Point(542, 62);
+            this.AjoutClient.Name = "AjoutClient";
+            this.AjoutClient.Size = new System.Drawing.Size(126, 24);
+            this.AjoutClient.TabIndex = 5;
+            this.AjoutClient.Text = "Ajouter un client";
+            this.AjoutClient.UseVisualStyleBackColor = true;
+            this.AjoutClient.Click += new System.EventHandler(this.AjoutClient_Click);
+            // 
             // clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 391);
+            this.Controls.Add(this.AjoutClient);
             this.Controls.Add(this.BackMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SelectClient);
@@ -128,6 +140,7 @@ namespace AutofactApp
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BackMenu;
+        private System.Windows.Forms.Button AjoutClient;
     }
 }
 

@@ -46,5 +46,12 @@ namespace AutofactApp
             Menu.Show();
             this.Hide();
         }
+
+        private void AjoutClient_Click(object sender, EventArgs e)
+        {
+            Form AjoutClient = new AjoutClient();
+            AjoutClient.Show();
+            this.Hide();
+        }
     }
 }

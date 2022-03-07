@@ -35,6 +35,7 @@ namespace AutofactApp
             this.NewLoginText = new System.Windows.Forms.TextBox();
             this.NewPassword = new System.Windows.Forms.Label();
             this.NewLogin = new System.Windows.Forms.Label();
+            this.BackMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Clear
@@ -94,11 +95,22 @@ namespace AutofactApp
             this.NewLogin.TabIndex = 7;
             this.NewLogin.Text = "login";
             // 
+            // BackMenu
+            // 
+            this.BackMenu.Location = new System.Drawing.Point(172, 60);
+            this.BackMenu.Name = "BackMenu";
+            this.BackMenu.Size = new System.Drawing.Size(118, 38);
+            this.BackMenu.TabIndex = 12;
+            this.BackMenu.Text = "Retour au menu";
+            this.BackMenu.UseVisualStyleBackColor = true;
+            this.BackMenu.Click += new System.EventHandler(this.BackMenu_Click);
+            // 
             // AjoutUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackMenu);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.ConfirmAdd);
             this.Controls.Add(this.NewPassText);
@@ -121,5 +133,6 @@ namespace AutofactApp
         private System.Windows.Forms.TextBox NewLoginText;
         private System.Windows.Forms.Label NewPassword;
         private System.Windows.Forms.Label NewLogin;
+        private System.Windows.Forms.Button BackMenu;
     }
 }

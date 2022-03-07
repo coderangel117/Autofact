@@ -31,7 +31,16 @@ namespace AutofactApp
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-
+            DialogResult res;
+            res = MessageBox.Show("Do you woant to exit ", "exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Ajoututilisateur_Click(object sender, EventArgs e)
