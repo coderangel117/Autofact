@@ -53,5 +53,64 @@ namespace AutofactApp
             AjoutClient.Show();
             this.Hide();
         }
+
+        private void SelectClient_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            idUser.Text = SelectClient.Rows[e.RowIndex].Cells[0].Value.ToString();
+            NewNomText.Text = SelectClient.Rows[e.RowIndex].Cells[1].Value.ToString();
+            NewPrenomText.Text = SelectClient.Rows[e.RowIndex].Cells[2].Value.ToString();
+            NewTelText.Text = SelectClient.Rows[e.RowIndex].Cells[3].Value.ToString();
+            NewMailText.Text = SelectClient.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (NewNomText.Text != "" && NewPrenomText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
+            {
+                string cs = "server=localhost;user=root;password=;database=autofact";
+                MySqlConnection connection = new MySqlConnection(cs);
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("update client set nom=@nom,prenom=@prenom,telephone=@telephone, mail=@mail where idC=@id", connection);
+                cmd.Parameters.AddWithValue("@id", idUser.Text);
+                cmd.Parameters.AddWithValue("@nom", NewNomText.Text);
+                cmd.Parameters.AddWithValue("@prenom", NewPrenomText.Text);
+                cmd.Parameters.AddWithValue("@telephone", NewTelText.Text);
+                cmd.Parameters.AddWithValue("@mail", NewMailText.Text);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                        Form Menu = new Menu();
+            Menu.Show();
+            this.Hide();
+            MessageBox.Show("Customer informations Updated Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Please enter mandatory details!");
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cs = "server=localhost;user=root;password=;database=autofact";
+            MySqlConnection connection = new MySqlConnection(cs);
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("delete from client where idC=@id", connection);
+            cmd.Parameters.AddWithValue("@id", idUser.Text);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Car Deleted Successfully!");
+            Form Menu = new Menu();
+            Menu.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form ajoutClient = new AjoutClient();
+            ajoutClient.Show();
+            this.Hide();
+        }
     }
 }
