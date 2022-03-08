@@ -30,7 +30,6 @@ namespace AutofactApp
         private void InitializeComponent()
         {
             this.SupprimerUtilisateur = new System.Windows.Forms.Button();
-            this.ModifierUtilisateur = new System.Windows.Forms.Button();
             this.BackMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SelectUtilisateur = new System.Windows.Forms.DataGridView();
@@ -38,7 +37,6 @@ namespace AutofactApp
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AjouterUtilisateur = new System.Windows.Forms.Button();
             this.IdUtilisateur = new System.Windows.Forms.TextBox();
-            this.BoutonEffacer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SelectUtilisateur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,16 +49,6 @@ namespace AutofactApp
             this.SupprimerUtilisateur.Text = "Supprimer";
             this.SupprimerUtilisateur.UseVisualStyleBackColor = true;
             this.SupprimerUtilisateur.Click += new System.EventHandler(this.SupprimerUtilisateur_Click);
-            // 
-            // ModifierUtilisateur
-            // 
-            this.ModifierUtilisateur.Location = new System.Drawing.Point(692, 168);
-            this.ModifierUtilisateur.Name = "ModifierUtilisateur";
-            this.ModifierUtilisateur.Size = new System.Drawing.Size(128, 23);
-            this.ModifierUtilisateur.TabIndex = 25;
-            this.ModifierUtilisateur.Text = "Modifier";
-            this.ModifierUtilisateur.UseVisualStyleBackColor = true;
-            this.ModifierUtilisateur.Click += new System.EventHandler(this.ModifierUtilisateur_Click);
             // 
             // BackMenu
             // 
@@ -125,33 +113,21 @@ namespace AutofactApp
             // IdUtilisateur
             // 
             this.IdUtilisateur.Enabled = false;
-            this.IdUtilisateur.Location = new System.Drawing.Point(132, 118);
+            this.IdUtilisateur.Location = new System.Drawing.Point(287, 118);
             this.IdUtilisateur.Name = "IdUtilisateur";
             this.IdUtilisateur.ReadOnly = true;
             this.IdUtilisateur.Size = new System.Drawing.Size(100, 23);
             this.IdUtilisateur.TabIndex = 40;
             this.IdUtilisateur.Visible = false;
             // 
-            // BoutonEffacer
-            // 
-            this.BoutonEffacer.Location = new System.Drawing.Point(332, 238);
-            this.BoutonEffacer.Name = "BoutonEffacer";
-            this.BoutonEffacer.Size = new System.Drawing.Size(82, 23);
-            this.BoutonEffacer.TabIndex = 41;
-            this.BoutonEffacer.Text = "Effacer";
-            this.BoutonEffacer.UseVisualStyleBackColor = true;
-            this.BoutonEffacer.Click += new System.EventHandler(this.BoutonEffacer_Click);
-            // 
             // utilisateurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 550);
-            this.Controls.Add(this.BoutonEffacer);
             this.Controls.Add(this.IdUtilisateur);
             this.Controls.Add(this.AjouterUtilisateur);
             this.Controls.Add(this.SupprimerUtilisateur);
-            this.Controls.Add(this.ModifierUtilisateur);
             this.Controls.Add(this.BackMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SelectUtilisateur);
@@ -166,7 +142,6 @@ namespace AutofactApp
 
         #endregion
         private System.Windows.Forms.Button SupprimerUtilisateur;
-        private System.Windows.Forms.Button ModifierUtilisateur;
         private System.Windows.Forms.Button BackMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView SelectUtilisateur;
@@ -174,6 +149,5 @@ namespace AutofactApp
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
         private System.Windows.Forms.TextBox IdUtilisateur;
-        private System.Windows.Forms.Button BoutonEffacer;
     }
 }

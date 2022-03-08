@@ -37,7 +37,18 @@ namespace AutofactApp
                 cmd.Parameters.AddWithValue("@password", NewPassText.Text);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Vos informations d'utilisateur ont bien été ajoutées");
+                DialogResult res;
+                res = MessageBox.Show("Voulez vous vous connecter avec ce nouvel utilisateur ? ", "Vos informations d'utilisateur ont bien été ajoutées !!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (res == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+                else
+                {
+                    Form Accueil = new Accueil();
+                    Accueil.Show();
+                    this.Hide();
+                }
             }
             else{
                 MessageBox.Show("Please enter mandatory details!");

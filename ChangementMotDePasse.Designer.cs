@@ -38,11 +38,14 @@ namespace AutofactApp
             this.label4 = new System.Windows.Forms.Label();
             this.ConfirmerChangementMdp = new System.Windows.Forms.Button();
             this.EffacerChamps = new System.Windows.Forms.Button();
+            this.RetourMenu = new System.Windows.Forms.Button();
+            this.LoginBox = new System.Windows.Forms.TextBox();
+            this.Login = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AncienMdpBox
             // 
-            this.AncienMdpBox.Location = new System.Drawing.Point(429, 139);
+            this.AncienMdpBox.Location = new System.Drawing.Point(499, 219);
             this.AncienMdpBox.Margin = new System.Windows.Forms.Padding(4);
             this.AncienMdpBox.Name = "AncienMdpBox";
             this.AncienMdpBox.Size = new System.Drawing.Size(127, 29);
@@ -52,7 +55,7 @@ namespace AutofactApp
             // 
             this.AncienMdp.AutoSize = true;
             this.AncienMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AncienMdp.Location = new System.Drawing.Point(233, 142);
+            this.AncienMdp.Location = new System.Drawing.Point(303, 222);
             this.AncienMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AncienMdp.Name = "AncienMdp";
             this.AncienMdp.Size = new System.Drawing.Size(153, 21);
@@ -63,7 +66,7 @@ namespace AutofactApp
             // 
             this.NouveauMdp.AutoSize = true;
             this.NouveauMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NouveauMdp.Location = new System.Drawing.Point(233, 228);
+            this.NouveauMdp.Location = new System.Drawing.Point(303, 308);
             this.NouveauMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NouveauMdp.Name = "NouveauMdp";
             this.NouveauMdp.Size = new System.Drawing.Size(173, 21);
@@ -72,7 +75,7 @@ namespace AutofactApp
             // 
             // NouveauMdpBox
             // 
-            this.NouveauMdpBox.Location = new System.Drawing.Point(429, 225);
+            this.NouveauMdpBox.Location = new System.Drawing.Point(499, 305);
             this.NouveauMdpBox.Margin = new System.Windows.Forms.Padding(4);
             this.NouveauMdpBox.Name = "NouveauMdpBox";
             this.NouveauMdpBox.Size = new System.Drawing.Size(127, 29);
@@ -80,7 +83,7 @@ namespace AutofactApp
             // 
             // ConfirmationNouveauMdpBox
             // 
-            this.ConfirmationNouveauMdpBox.Location = new System.Drawing.Point(429, 311);
+            this.ConfirmationNouveauMdpBox.Location = new System.Drawing.Point(499, 391);
             this.ConfirmationNouveauMdpBox.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmationNouveauMdpBox.Name = "ConfirmationNouveauMdpBox";
             this.ConfirmationNouveauMdpBox.Size = new System.Drawing.Size(127, 29);
@@ -90,7 +93,7 @@ namespace AutofactApp
             // 
             this.ConfirmationNouveauMdp.AutoSize = true;
             this.ConfirmationNouveauMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConfirmationNouveauMdp.Location = new System.Drawing.Point(131, 319);
+            this.ConfirmationNouveauMdp.Location = new System.Drawing.Point(192, 399);
             this.ConfirmationNouveauMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ConfirmationNouveauMdp.Name = "ConfirmationNouveauMdp";
             this.ConfirmationNouveauMdp.Size = new System.Drawing.Size(284, 21);
@@ -110,7 +113,7 @@ namespace AutofactApp
             // 
             // ConfirmerChangementMdp
             // 
-            this.ConfirmerChangementMdp.Location = new System.Drawing.Point(474, 423);
+            this.ConfirmerChangementMdp.Location = new System.Drawing.Point(544, 503);
             this.ConfirmerChangementMdp.Name = "ConfirmerChangementMdp";
             this.ConfirmerChangementMdp.Size = new System.Drawing.Size(120, 32);
             this.ConfirmerChangementMdp.TabIndex = 7;
@@ -120,7 +123,7 @@ namespace AutofactApp
             // 
             // EffacerChamps
             // 
-            this.EffacerChamps.Location = new System.Drawing.Point(314, 423);
+            this.EffacerChamps.Location = new System.Drawing.Point(384, 503);
             this.EffacerChamps.Name = "EffacerChamps";
             this.EffacerChamps.Size = new System.Drawing.Size(120, 32);
             this.EffacerChamps.TabIndex = 8;
@@ -128,11 +131,42 @@ namespace AutofactApp
             this.EffacerChamps.UseVisualStyleBackColor = true;
             this.EffacerChamps.Click += new System.EventHandler(this.EffacerChamps_Click);
             // 
+            // RetourMenu
+            // 
+            this.RetourMenu.Location = new System.Drawing.Point(27, 31);
+            this.RetourMenu.Name = "RetourMenu";
+            this.RetourMenu.Size = new System.Drawing.Size(162, 32);
+            this.RetourMenu.TabIndex = 9;
+            this.RetourMenu.Text = "Retour au menu";
+            this.RetourMenu.UseVisualStyleBackColor = true;
+            this.RetourMenu.Click += new System.EventHandler(this.RetourMenu_Click);
+            // 
+            // LoginBox
+            // 
+            this.LoginBox.Location = new System.Drawing.Point(499, 142);
+            this.LoginBox.Name = "LoginBox";
+            this.LoginBox.Size = new System.Drawing.Size(127, 29);
+            this.LoginBox.TabIndex = 10;
+            // 
+            // Login
+            // 
+            this.Login.AutoSize = true;
+            this.Login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Login.Location = new System.Drawing.Point(374, 142);
+            this.Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(49, 21);
+            this.Login.TabIndex = 11;
+            this.Login.Text = "Login";
+            // 
             // ChangementMotDePasse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 630);
+            this.Controls.Add(this.Login);
+            this.Controls.Add(this.LoginBox);
+            this.Controls.Add(this.RetourMenu);
             this.Controls.Add(this.EffacerChamps);
             this.Controls.Add(this.ConfirmerChangementMdp);
             this.Controls.Add(this.label4);
@@ -163,5 +197,8 @@ namespace AutofactApp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ConfirmerChangementMdp;
         private System.Windows.Forms.Button EffacerChamps;
+        private System.Windows.Forms.Button RetourMenu;
+        private System.Windows.Forms.TextBox LoginBox;
+        private System.Windows.Forms.Label Login;
     }
 }

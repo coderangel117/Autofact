@@ -55,7 +55,7 @@ namespace AutofactApp
             string cs = "server=localhost;user=root;password=;database=autofact";
             MySqlConnection connection = new MySqlConnection(cs);
             connection.Open();
-            MySqlCommand cmd = new MySqlCommand("delete from autofact.utilisateur where id=@id", connection);
+            MySqlCommand cmd = new MySqlCommand("delete from autofact.utilisateur where idU=@id", connection);
             cmd.Parameters.AddWithValue("@id", IdUtilisateur.Text);
             cmd.ExecuteNonQuery();
             connection.Close();
@@ -63,20 +63,9 @@ namespace AutofactApp
             Form Menu = new Menu();
             Menu.Show();
             this.Hide();
-        }
+         
 
-        private void BoutonEffacer_Click(object sender, EventArgs e)
-        {
-            IdUtilisateur.Clear();
         }
-
-        private void ModifierUtilisateur_Click(object sender, EventArgs e)
-        {
-            Form Menu = new Menu();
-            Menu.Show();
-            this.Hide();
-        }
-
         private void SelectUtilisateur_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             IdUtilisateur.Text = SelectUtilisateur.Rows[e.RowIndex].Cells[0].Value.ToString();
