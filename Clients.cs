@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AutofactApp
 {
-    public partial class clients : Form
+    public partial class Customers : Form
     {
-        public clients()
+        public Customers()
         {
             InitializeComponent();
         }
@@ -35,45 +35,32 @@ namespace AutofactApp
             }
         }
 
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
         private void BackMenu_Click(object sender, EventArgs e)
         {
             Form Menu = new Menu();
             Menu.Show();
             this.Hide();
         }
-
-        private void AjoutClient_Click(object sender, EventArgs e)
-        {
-            Form AjoutClient = new AjoutClient();
-            AjoutClient.Show();
-            this.Hide();
-        }
-
         private void SelectClient_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             idUser.Text = SelectClient.Rows[e.RowIndex].Cells[0].Value.ToString();
-            NewNomText.Text = SelectClient.Rows[e.RowIndex].Cells[1].Value.ToString();
-            NewPrenomText.Text = SelectClient.Rows[e.RowIndex].Cells[2].Value.ToString();
+            NewLastnameText.Text = SelectClient.Rows[e.RowIndex].Cells[1].Value.ToString();
+            NewFirstnameText.Text = SelectClient.Rows[e.RowIndex].Cells[2].Value.ToString();
             NewTelText.Text = SelectClient.Rows[e.RowIndex].Cells[3].Value.ToString();
             NewMailText.Text = SelectClient.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void UpdateCustomersBtn_Click(object sender, EventArgs e)
         {
-            if (NewNomText.Text != "" && NewPrenomText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
+            if (NewLastnameText.Text != "" && NewFirstnameText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
             {
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand("update client set nom=@nom,prenom=@prenom,telephone=@telephone, mail=@mail where idC=@id", connection);
                 cmd.Parameters.AddWithValue("@id", idUser.Text);
-                cmd.Parameters.AddWithValue("@nom", NewNomText.Text);
-                cmd.Parameters.AddWithValue("@prenom", NewPrenomText.Text);
+                cmd.Parameters.AddWithValue("@nom", NewLastnameText.Text);
+                cmd.Parameters.AddWithValue("@prenom", NewFirstnameText.Text);
                 cmd.Parameters.AddWithValue("@telephone", NewTelText.Text);
                 cmd.Parameters.AddWithValue("@mail", NewMailText.Text);
                 cmd.ExecuteNonQuery();
@@ -90,7 +77,7 @@ namespace AutofactApp
             }
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteCustomersBtn_Click(object sender, EventArgs e)
         {
             string cs = "server=localhost;user=root;password=;database=autofact";
             MySqlConnection connection = new MySqlConnection(cs);
@@ -105,7 +92,7 @@ namespace AutofactApp
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void AddCustomersBtn_Click(object sender, EventArgs e)
         {
             Form ajoutClient = new AjoutClient();
             ajoutClient.Show();
@@ -115,8 +102,8 @@ namespace AutofactApp
         private void Clear_Click(object sender, EventArgs e)
         {
             idUser.Clear();
-            NewNomText.Clear();
-            NewPrenomText.Clear();
+            NewLastnameText.Clear();
+            NewFirstnameText.Clear();
             NewTelText.Clear();
             NewMailText.Clear();
         }

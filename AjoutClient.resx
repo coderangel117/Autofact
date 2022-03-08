@@ -62,7 +62,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="BackMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 45</value>
+    <value>12, 22</value>
   </data>
   <data name="BackMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 40</value>
@@ -84,13 +84,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BackMenu.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="AddConfirm.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="AddConfirm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 329</value>
+    <value>367, 371</value>
   </data>
   <data name="AddConfirm.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 35</value>
@@ -111,109 +111,109 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AddConfirm.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
-  <data name="NewNomText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 38</value>
+  <data name="NewLastnameText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 80</value>
   </data>
-  <data name="NewNomText.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NewLastnameText.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="NewNomText.TabIndex" type="System.Int32, mscorlib">
+  <data name="NewLastnameText.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;NewNomText.Name" xml:space="preserve">
-    <value>NewNomText</value>
+  <data name="&gt;&gt;NewLastnameText.Name" xml:space="preserve">
+    <value>NewLastnameText</value>
   </data>
-  <data name="&gt;&gt;NewNomText.Type" xml:space="preserve">
+  <data name="&gt;&gt;NewLastnameText.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NewNomText.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NewLastnameText.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;NewNomText.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;NewLastnameText.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="NewPrenomText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 113</value>
+  <data name="NewFirstnameText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 155</value>
   </data>
-  <data name="NewPrenomText.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NewFirstnameText.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="NewPrenomText.TabIndex" type="System.Int32, mscorlib">
+  <data name="NewFirstnameText.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;NewPrenomText.Name" xml:space="preserve">
-    <value>NewPrenomText</value>
+  <data name="&gt;&gt;NewFirstnameText.Name" xml:space="preserve">
+    <value>NewFirstnameText</value>
   </data>
-  <data name="&gt;&gt;NewPrenomText.Type" xml:space="preserve">
+  <data name="&gt;&gt;NewFirstnameText.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NewPrenomText.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NewFirstnameText.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;NewPrenomText.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;NewFirstnameText.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
-  <data name="NewNom.AutoSize" type="System.Boolean, mscorlib">
+  <data name="NewLastname.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="NewNom.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="NewLastname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="NewNom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 38</value>
+  <data name="NewLastname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 80</value>
   </data>
-  <data name="NewNom.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NewLastname.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 21</value>
   </data>
-  <data name="NewNom.TabIndex" type="System.Int32, mscorlib">
+  <data name="NewLastname.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="NewNom.Text" xml:space="preserve">
+  <data name="NewLastname.Text" xml:space="preserve">
     <value>Nom</value>
   </data>
-  <data name="&gt;&gt;NewNom.Name" xml:space="preserve">
-    <value>NewNom</value>
+  <data name="&gt;&gt;NewLastname.Name" xml:space="preserve">
+    <value>NewLastname</value>
   </data>
-  <data name="&gt;&gt;NewNom.Type" xml:space="preserve">
+  <data name="&gt;&gt;NewLastname.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NewNom.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NewLastname.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;NewNom.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;NewLastname.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="NewPrenom.AutoSize" type="System.Boolean, mscorlib">
+  <data name="NewFirstname.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="NewPrenom.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="NewFirstname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="NewPrenom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 115</value>
+  <data name="NewFirstname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 157</value>
   </data>
-  <data name="NewPrenom.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NewFirstname.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 21</value>
   </data>
-  <data name="NewPrenom.TabIndex" type="System.Int32, mscorlib">
+  <data name="NewFirstname.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="NewPrenom.Text" xml:space="preserve">
+  <data name="NewFirstname.Text" xml:space="preserve">
     <value>Prenom</value>
   </data>
-  <data name="&gt;&gt;NewPrenom.Name" xml:space="preserve">
-    <value>NewPrenom</value>
+  <data name="&gt;&gt;NewFirstname.Name" xml:space="preserve">
+    <value>NewFirstname</value>
   </data>
-  <data name="&gt;&gt;NewPrenom.Type" xml:space="preserve">
+  <data name="&gt;&gt;NewFirstname.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NewPrenom.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NewFirstname.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;NewPrenom.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;NewFirstname.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="NewMail.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -222,7 +222,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="NewMail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 257</value>
+    <value>235, 299</value>
   </data>
   <data name="NewMail.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 21</value>
@@ -243,7 +243,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NewMail.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="NewTel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -252,7 +252,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="NewTel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 177</value>
+    <value>235, 228</value>
   </data>
   <data name="NewTel.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 21</value>
@@ -273,10 +273,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NewTel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="NewMailText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 259</value>
+    <value>367, 301</value>
   </data>
   <data name="NewMailText.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -294,10 +294,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NewMailText.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="NewTelText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 184</value>
+    <value>367, 226</value>
   </data>
   <data name="NewTelText.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -315,13 +315,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NewTelText.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Clear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="Clear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 329</value>
+    <value>235, 371</value>
   </data>
   <data name="Clear.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 33</value>
@@ -330,7 +330,7 @@
     <value>6</value>
   </data>
   <data name="Clear.Text" xml:space="preserve">
-    <value>Clear</value>
+    <value>Effacer</value>
   </data>
   <data name="&gt;&gt;Clear.Name" xml:space="preserve">
     <value>Clear</value>
@@ -342,6 +342,36 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Clear.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Title.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Title.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 22</value>
+  </data>
+  <data name="Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 21</value>
+  </data>
+  <data name="Title.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Ajouter un client</value>
+  </data>
+  <data name="&gt;&gt;Title.Name" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="&gt;&gt;Title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Title.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -354,7 +384,7 @@
     <value>800, 450</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>AjoutClient</value>
+    <value>Ajout de client</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AjoutClient</value>

@@ -17,14 +17,14 @@ namespace AutofactApp
             InitializeComponent();
         }
 
-        private void Clients_Click(object sender, EventArgs e)
+        private void CustomersButton_Click(object sender, EventArgs e)
         {
-            Form Clients = new clients();
+            Form Clients = new Customers();
             Clients.Show();
             this.Hide();
         }
 
-        private void Logout_Click(object sender, EventArgs e)
+        private void LogoutButton_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }
@@ -32,7 +32,7 @@ namespace AutofactApp
         private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult res;
-            res = MessageBox.Show("Do you want to exit ", "exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            res = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (res == DialogResult.Yes)
             {
                 Application.Exit();
@@ -43,17 +43,17 @@ namespace AutofactApp
             }
         }
 
-        private void utilisateurs_Click(object sender, EventArgs e)
+        private void UsersButton_Click(object sender, EventArgs e)
         {
             Form ListeUtilisateurs = new utilisateurs();
             ListeUtilisateurs.Show();
             this.Hide();
         }
 
-        private void ChangementMdp_Click(object sender, EventArgs e)
+        private void ChangementMdpButton_Click(object sender, EventArgs e)
         {
 
-            Form ChangeMdp = new ChangementMotDePasse();
+            Form ChangeMdp = new ChangeFormMdp();
             ChangeMdp.Show();
             this.Hide();
         }

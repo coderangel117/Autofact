@@ -11,35 +11,29 @@ using System.Windows.Forms;
 
 namespace AutofactApp
 {
-    public partial class ChangementMotDePasse : Form
+    public partial class ChangeFormMdp : Form
     {
-        public ChangementMotDePasse()
+        public ChangeFormMdp()
         {
             InitializeComponent();
         }
-
-        private void ChangementMotDePasse_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ConfirmerChangementMdp_Click(object sender, EventArgs e)
         {
-            if (NouveauMdpBox.Text != "" && ConfirmationNouveauMdpBox.Text != "" && AncienMdpBox.Text != "")
+            if (NewMdpBox.Text != "" && ConfirmNewMdpBox.Text != "" && OldMdpBox.Text != "")
             {
-                if (NouveauMdpBox.Text == ConfirmationNouveauMdpBox.Text) {
+                if (NewMdpBox.Text == ConfirmNewMdpBox.Text) {
                     string cs = "server=localhost;user=root;password=;database=autofact";
                     MySqlConnection connection = new MySqlConnection(cs);
                     connection.Open();
-                    MySqlCommand cmd = new MySqlCommand("update utilisateur set password=@ConfirmMdp where password=@AncienMdp", connection);
-                    cmd.Parameters.AddWithValue("@AncienMdp", AncienMdpBox.Text);
-                    cmd.Parameters.AddWithValue("@ConfirmMdp", NouveauMdpBox.Text);
+                    MySqlCommand cmd = new MySqlCommand("update utilisateur set password=@NewMdp where password=@OldMdp", connection);
+                    cmd.Parameters.AddWithValue("@OldMdp", OldMdpBox.Text);
+                    cmd.Parameters.AddWithValue("@NewMdp", NewMdpBox.Text);
                     cmd.ExecuteNonQuery();
                     connection.Close();
                     Form Menu = new Menu();
                     Menu.Show();
                     this.Hide();
-                    MessageBox.Show("Customer informations Updated Successfully");
+                    MessageBox.Show("Les informations du clients ont bien été modifiés !! ");
                 }
                 else
                 {
@@ -48,7 +42,7 @@ namespace AutofactApp
             }
             else
             {
-                MessageBox.Show("Please enter mandatory details!");
+                MessageBox.Show("Tous les champs doivent être remplis");
 
             }
         }

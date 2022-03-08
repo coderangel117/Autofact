@@ -1,7 +1,7 @@
 ﻿
 namespace AutofactApp
 {
-    partial class clients
+    partial class Customers
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,22 +35,22 @@ namespace AutofactApp
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CustomersList = new System.Windows.Forms.Label();
             this.BackMenu = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UpdateCustomersBtn = new System.Windows.Forms.Button();
+            this.DeleteCustomersBtn = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.NewMail = new System.Windows.Forms.Label();
             this.NewTel = new System.Windows.Forms.Label();
             this.NewMailText = new System.Windows.Forms.TextBox();
             this.NewTelText = new System.Windows.Forms.TextBox();
-            this.NewPrenom = new System.Windows.Forms.Label();
-            this.NewNom = new System.Windows.Forms.Label();
-            this.NewPrenomText = new System.Windows.Forms.TextBox();
-            this.NewNomText = new System.Windows.Forms.TextBox();
-            this.AddConfirm = new System.Windows.Forms.Button();
+            this.NewFirstname = new System.Windows.Forms.Label();
+            this.NewLastname = new System.Windows.Forms.Label();
+            this.NewFirstnameText = new System.Windows.Forms.TextBox();
+            this.NewLastnameText = new System.Windows.Forms.TextBox();
+            this.Confirm = new System.Windows.Forms.Button();
             this.idUser = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.AddCustomersBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,15 +102,15 @@ namespace AutofactApp
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // label1
+            // CustomersList
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(381, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Liste des clients";
+            this.CustomersList.AutoSize = true;
+            this.CustomersList.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomersList.Location = new System.Drawing.Point(381, 12);
+            this.CustomersList.Name = "CustomersList";
+            this.CustomersList.Size = new System.Drawing.Size(146, 28);
+            this.CustomersList.TabIndex = 3;
+            this.CustomersList.Text = "Liste des clients";
             // 
             // BackMenu
             // 
@@ -123,25 +123,25 @@ namespace AutofactApp
             this.BackMenu.UseVisualStyleBackColor = true;
             this.BackMenu.Click += new System.EventHandler(this.BackMenu_Click);
             // 
-            // button1
+            // UpdateCustomersBtn
             // 
-            this.button1.Location = new System.Drawing.Point(789, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Modifier";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.UpdateCustomersBtn.Location = new System.Drawing.Point(789, 167);
+            this.UpdateCustomersBtn.Name = "UpdateCustomersBtn";
+            this.UpdateCustomersBtn.Size = new System.Drawing.Size(128, 23);
+            this.UpdateCustomersBtn.TabIndex = 6;
+            this.UpdateCustomersBtn.Text = "Modifier";
+            this.UpdateCustomersBtn.UseVisualStyleBackColor = true;
+            this.UpdateCustomersBtn.Click += new System.EventHandler(this.UpdateCustomersBtn_Click);
             // 
-            // button2
+            // DeleteCustomersBtn
             // 
-            this.button2.Location = new System.Drawing.Point(789, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Supprimer";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.DeleteCustomersBtn.Location = new System.Drawing.Point(789, 233);
+            this.DeleteCustomersBtn.Name = "DeleteCustomersBtn";
+            this.DeleteCustomersBtn.Size = new System.Drawing.Size(126, 23);
+            this.DeleteCustomersBtn.TabIndex = 7;
+            this.DeleteCustomersBtn.Text = "Supprimer";
+            this.DeleteCustomersBtn.UseVisualStyleBackColor = true;
+            this.DeleteCustomersBtn.Click += new System.EventHandler(this.DeleteCustomersBtn_Click);
             // 
             // Clear
             // 
@@ -193,54 +193,54 @@ namespace AutofactApp
             this.NewTelText.TabIndex = 12;
             this.NewTelText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // NewPrenom
+            // NewFirstname
             // 
-            this.NewPrenom.AutoSize = true;
-            this.NewPrenom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewPrenom.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NewPrenom.Location = new System.Drawing.Point(534, 98);
-            this.NewPrenom.Name = "NewPrenom";
-            this.NewPrenom.Size = new System.Drawing.Size(65, 21);
-            this.NewPrenom.TabIndex = 15;
-            this.NewPrenom.Text = "Prenom";
+            this.NewFirstname.AutoSize = true;
+            this.NewFirstname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NewFirstname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NewFirstname.Location = new System.Drawing.Point(534, 98);
+            this.NewFirstname.Name = "NewFirstname";
+            this.NewFirstname.Size = new System.Drawing.Size(65, 21);
+            this.NewFirstname.TabIndex = 15;
+            this.NewFirstname.Text = "Prenom";
             // 
-            // NewNom
+            // NewLastname
             // 
-            this.NewNom.AutoSize = true;
-            this.NewNom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewNom.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NewNom.Location = new System.Drawing.Point(224, 94);
-            this.NewNom.Name = "NewNom";
-            this.NewNom.Size = new System.Drawing.Size(45, 21);
-            this.NewNom.TabIndex = 14;
-            this.NewNom.Text = "Nom";
+            this.NewLastname.AutoSize = true;
+            this.NewLastname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NewLastname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NewLastname.Location = new System.Drawing.Point(224, 94);
+            this.NewLastname.Name = "NewLastname";
+            this.NewLastname.Size = new System.Drawing.Size(45, 21);
+            this.NewLastname.TabIndex = 14;
+            this.NewLastname.Text = "Nom";
             // 
-            // NewPrenomText
+            // NewFirstnameText
             // 
-            this.NewPrenomText.Location = new System.Drawing.Point(632, 98);
-            this.NewPrenomText.Name = "NewPrenomText";
-            this.NewPrenomText.Size = new System.Drawing.Size(100, 23);
-            this.NewPrenomText.TabIndex = 11;
-            this.NewPrenomText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NewFirstnameText.Location = new System.Drawing.Point(632, 98);
+            this.NewFirstnameText.Name = "NewFirstnameText";
+            this.NewFirstnameText.Size = new System.Drawing.Size(100, 23);
+            this.NewFirstnameText.TabIndex = 11;
+            this.NewFirstnameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // NewNomText
+            // NewLastnameText
             // 
-            this.NewNomText.Location = new System.Drawing.Point(321, 96);
-            this.NewNomText.Name = "NewNomText";
-            this.NewNomText.Size = new System.Drawing.Size(100, 23);
-            this.NewNomText.TabIndex = 10;
-            this.NewNomText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NewLastnameText.Location = new System.Drawing.Point(321, 96);
+            this.NewLastnameText.Name = "NewLastnameText";
+            this.NewLastnameText.Size = new System.Drawing.Size(100, 23);
+            this.NewLastnameText.TabIndex = 10;
+            this.NewLastnameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // AddConfirm
+            // Confirm
             // 
-            this.AddConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddConfirm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AddConfirm.Location = new System.Drawing.Point(500, 263);
-            this.AddConfirm.Name = "AddConfirm";
-            this.AddConfirm.Size = new System.Drawing.Size(99, 33);
-            this.AddConfirm.TabIndex = 16;
-            this.AddConfirm.Text = "Confirmer";
-            this.AddConfirm.UseVisualStyleBackColor = true;
+            this.Confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Confirm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Confirm.Location = new System.Drawing.Point(500, 263);
+            this.Confirm.Name = "Confirm";
+            this.Confirm.Size = new System.Drawing.Size(99, 33);
+            this.Confirm.TabIndex = 16;
+            this.Confirm.Text = "Confirmer";
+            this.Confirm.UseVisualStyleBackColor = true;
             // 
             // idUser
             // 
@@ -252,39 +252,39 @@ namespace AutofactApp
             this.idUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.idUser.Visible = false;
             // 
-            // button3
+            // AddCustomersBtn
             // 
-            this.button3.Location = new System.Drawing.Point(789, 98);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 24);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Ajouter";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.AddCustomersBtn.Location = new System.Drawing.Point(789, 98);
+            this.AddCustomersBtn.Name = "AddCustomersBtn";
+            this.AddCustomersBtn.Size = new System.Drawing.Size(133, 24);
+            this.AddCustomersBtn.TabIndex = 21;
+            this.AddCustomersBtn.Text = "Ajouter";
+            this.AddCustomersBtn.UseVisualStyleBackColor = true;
+            this.AddCustomersBtn.Click += new System.EventHandler(this.AddCustomersBtn_Click);
             // 
-            // clients
+            // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 552);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.AddCustomersBtn);
             this.Controls.Add(this.idUser);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.NewMail);
             this.Controls.Add(this.NewTel);
             this.Controls.Add(this.NewMailText);
             this.Controls.Add(this.NewTelText);
-            this.Controls.Add(this.NewPrenom);
-            this.Controls.Add(this.NewNom);
-            this.Controls.Add(this.NewPrenomText);
-            this.Controls.Add(this.NewNomText);
-            this.Controls.Add(this.AddConfirm);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NewFirstname);
+            this.Controls.Add(this.NewLastname);
+            this.Controls.Add(this.NewFirstnameText);
+            this.Controls.Add(this.NewLastnameText);
+            this.Controls.Add(this.Confirm);
+            this.Controls.Add(this.DeleteCustomersBtn);
+            this.Controls.Add(this.UpdateCustomersBtn);
             this.Controls.Add(this.BackMenu);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CustomersList);
             this.Controls.Add(this.SelectClient);
-            this.Name = "clients";
+            this.Name = "Customers";
             this.Text = "Clients";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).EndInit();
@@ -300,22 +300,22 @@ namespace AutofactApp
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CustomersList;
         private System.Windows.Forms.Button BackMenu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button UpdateCustomersBtn;
+        private System.Windows.Forms.Button DeleteCustomersBtn;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Label NewMail;
         private System.Windows.Forms.Label NewTel;
         private System.Windows.Forms.TextBox NewMailText;
         private System.Windows.Forms.TextBox NewTelText;
-        private System.Windows.Forms.Label NewPrenom;
-        private System.Windows.Forms.Label NewNom;
-        private System.Windows.Forms.TextBox NewPrenomText;
-        private System.Windows.Forms.TextBox NewNomText;
-        private System.Windows.Forms.Button AddConfirm;
+        private System.Windows.Forms.Label NewFirstname;
+        private System.Windows.Forms.Label NewLastname;
+        private System.Windows.Forms.TextBox NewFirstnameText;
+        private System.Windows.Forms.TextBox NewLastnameText;
+        private System.Windows.Forms.Button Confirm;
         private System.Windows.Forms.TextBox idUser;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button AddCustomersBtn;
     }
 }
 

@@ -28,42 +28,33 @@ namespace AutofactApp
             string username, user_password;
             username = Logintext.Text;
             user_password = Passtext.Text;
-
-
-            try
+            string cs = "server=localhost;user=root;password=;database=autofact";
+            MySqlConnection connection = new MySqlConnection(cs);
+            connection.Open();
+            string query = "select * from utilisateur where login = '" + Logintext.Text + "'AND password = '" + Passtext.Text + "'";
+            MySqlDataAdapter sda = new MySqlDataAdapter(query, connection);
+            DataTable dtable = new DataTable();
+            sda.Fill(dtable);
+            if (dtable.Rows.Count == 1)
             {
-                string cs = "server=localhost;user=root;password=;database=autofact";
-                MySqlConnection connection = new MySqlConnection(cs);
-                connection.Open();
-                string query = "select * from utilisateur where login = '" + Logintext.Text + "'AND password = '" + Passtext.Text + "'";
-                MySqlDataAdapter sda = new MySqlDataAdapter(query, connection);
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-                if (dtable.Rows.Count == 1)
-                {
-                    username = Logintext.Text;
-                    user_password = Passtext.Text;
-                    Form Menu = new Menu();
-                    Menu.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid login details !! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Passtext.Clear();
-                    Logintext.Clear();
-                    Logintext.Focus();
-                }
+                username = Logintext.Text;
+                user_password = Passtext.Text;
+                Form Menu = new Menu();
+                Menu.Show();
+                this.Hide();
             }
-            catch
+            else
             {
-                MessageBox.Show("Error !! ");
+                MessageBox.Show("Le login ou le mot de passe est erroné !! ", "Mauvaises informations", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Passtext.Clear();
+                Logintext.Clear();
+                Logintext.Focus();
             }
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult res;
-            res = MessageBox.Show("Do you woant to exit ", "exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            res = MessageBox.Show("Voulez-vous vraiment fermer l'application", "Fermer l'application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (res == DialogResult.Yes)
             {
             Application.Exit();
@@ -73,11 +64,12 @@ namespace AutofactApp
                 this.Show();
             }
         }
-        private void clear_Click(object sender, EventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
             Passtext.Clear();
             Logintext.Clear();
             Logintext.Focus();
         }
+
     }
 }

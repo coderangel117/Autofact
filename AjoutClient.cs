@@ -27,28 +27,28 @@ namespace AutofactApp
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            NewNomText.Clear();
-            NewPrenomText.Clear();
+            NewLastnameText.Clear();
+            NewFirstnameText.Clear();
             NewTelText.Clear();
             NewMailText.Clear();
-            NewNomText.Focus();
+            NewLastnameText.Focus();
         }
 
         private void AddConfirm_Click(object sender, EventArgs e)
         {
             string nom, prenom, telephone, mail;
-            nom = NewNomText.Text;
-            prenom = NewPrenomText.Text;
+            nom = NewLastnameText.Text;
+            prenom = NewFirstnameText.Text;
             telephone = NewTelText.Text;
             mail = NewMailText.Text;
-            if (NewNomText.Text != "" && NewPrenomText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
+            if (NewLastnameText.Text != "" && NewFirstnameText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
             {
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 MySqlCommand cmd = new MySqlCommand("insert into client(nom, prenom, telephone, mail) values(@nom, @prenom,@telephone, @mail )", connection);
                 connection.Open();
-                cmd.Parameters.AddWithValue("@nom", NewNomText.Text);
-                cmd.Parameters.AddWithValue("@prenom", NewPrenomText.Text);
+                cmd.Parameters.AddWithValue("@nom", NewLastnameText.Text);
+                cmd.Parameters.AddWithValue("@prenom", NewFirstnameText.Text);
                 cmd.Parameters.AddWithValue("@telephone", NewTelText.Text);
                 cmd.Parameters.AddWithValue("@mail", NewMailText.Text);
                 cmd.ExecuteNonQuery();

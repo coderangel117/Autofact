@@ -41,22 +41,22 @@ namespace AutofactApp
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Clear.Location = new System.Drawing.Point(359, 309);
+            this.Clear.Location = new System.Drawing.Point(315, 320);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(75, 37);
+            this.Clear.Size = new System.Drawing.Size(92, 37);
             this.Clear.TabIndex = 11;
-            this.Clear.Text = "Clear";
+            this.Clear.Text = "Effacer";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // ConfirmAdd
             // 
             this.ConfirmAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConfirmAdd.Location = new System.Drawing.Point(471, 309);
+            this.ConfirmAdd.Location = new System.Drawing.Point(455, 320);
             this.ConfirmAdd.Name = "ConfirmAdd";
-            this.ConfirmAdd.Size = new System.Drawing.Size(76, 37);
+            this.ConfirmAdd.Size = new System.Drawing.Size(92, 37);
             this.ConfirmAdd.TabIndex = 10;
-            this.ConfirmAdd.Text = "Confirm";
+            this.ConfirmAdd.Text = "Confirmer";
             this.ConfirmAdd.UseVisualStyleBackColor = true;
             this.ConfirmAdd.Click += new System.EventHandler(this.ConfirmAdd_Click);
             // 
@@ -79,27 +79,28 @@ namespace AutofactApp
             // 
             this.NewPassword.AutoSize = true;
             this.NewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewPassword.Location = new System.Drawing.Point(253, 254);
+            this.NewPassword.Location = new System.Drawing.Point(235, 251);
             this.NewPassword.Name = "NewPassword";
-            this.NewPassword.Size = new System.Drawing.Size(77, 21);
+            this.NewPassword.Size = new System.Drawing.Size(102, 21);
             this.NewPassword.TabIndex = 6;
-            this.NewPassword.Text = "password";
+            this.NewPassword.Text = "Mot de passe";
             // 
             // NewLogin
             // 
             this.NewLogin.AutoSize = true;
             this.NewLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewLogin.Location = new System.Drawing.Point(266, 168);
+            this.NewLogin.Location = new System.Drawing.Point(244, 167);
             this.NewLogin.Name = "NewLogin";
-            this.NewLogin.Size = new System.Drawing.Size(45, 21);
+            this.NewLogin.Size = new System.Drawing.Size(80, 21);
             this.NewLogin.TabIndex = 7;
-            this.NewLogin.Text = "login";
+            this.NewLogin.Text = "Identifiant";
             // 
             // BackMenu
             // 
+            this.BackMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BackMenu.Location = new System.Drawing.Point(172, 60);
             this.BackMenu.Name = "BackMenu";
-            this.BackMenu.Size = new System.Drawing.Size(118, 38);
+            this.BackMenu.Size = new System.Drawing.Size(139, 38);
             this.BackMenu.TabIndex = 12;
             this.BackMenu.Text = "Retour au menu";
             this.BackMenu.UseVisualStyleBackColor = true;
@@ -118,7 +119,7 @@ namespace AutofactApp
             this.Controls.Add(this.NewPassword);
             this.Controls.Add(this.NewLogin);
             this.Name = "AjoutUtilisateur";
-            this.Text = "AjoutUtilisateur";
+            this.Text = "Ajouter un utilisateur";
             this.Load += new System.EventHandler(this.NouveauUtilisateur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

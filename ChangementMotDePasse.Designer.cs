@@ -1,7 +1,7 @@
 ﻿
 namespace AutofactApp
 {
-    partial class ChangementMotDePasse
+    partial class ChangeFormMdp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,124 +29,123 @@ namespace AutofactApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.AncienMdpBox = new System.Windows.Forms.TextBox();
-            this.AncienMdp = new System.Windows.Forms.Label();
-            this.NouveauMdp = new System.Windows.Forms.Label();
-            this.NouveauMdpBox = new System.Windows.Forms.TextBox();
-            this.ConfirmationNouveauMdpBox = new System.Windows.Forms.TextBox();
-            this.ConfirmationNouveauMdp = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ConfirmerChangementMdp = new System.Windows.Forms.Button();
-            this.EffacerChamps = new System.Windows.Forms.Button();
+            this.OldMdpBox = new System.Windows.Forms.TextBox();
+            this.OldMdp = new System.Windows.Forms.Label();
+            this.NewMdp = new System.Windows.Forms.Label();
+            this.NewMdpBox = new System.Windows.Forms.TextBox();
+            this.ConfirmNewMdpBox = new System.Windows.Forms.TextBox();
+            this.ConfirmNewMdp = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
+            this.ConfirmChangeMdp = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // AncienMdpBox
+            // OldMdpBox
             // 
-            this.AncienMdpBox.Location = new System.Drawing.Point(429, 139);
-            this.AncienMdpBox.Margin = new System.Windows.Forms.Padding(4);
-            this.AncienMdpBox.Name = "AncienMdpBox";
-            this.AncienMdpBox.Size = new System.Drawing.Size(127, 29);
-            this.AncienMdpBox.TabIndex = 0;
+            this.OldMdpBox.Location = new System.Drawing.Point(429, 139);
+            this.OldMdpBox.Margin = new System.Windows.Forms.Padding(4);
+            this.OldMdpBox.Name = "OldMdpBox";
+            this.OldMdpBox.Size = new System.Drawing.Size(127, 29);
+            this.OldMdpBox.TabIndex = 0;
             // 
-            // AncienMdp
+            // OldMdp
             // 
-            this.AncienMdp.AutoSize = true;
-            this.AncienMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AncienMdp.Location = new System.Drawing.Point(233, 142);
-            this.AncienMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AncienMdp.Name = "AncienMdp";
-            this.AncienMdp.Size = new System.Drawing.Size(153, 21);
-            this.AncienMdp.TabIndex = 1;
-            this.AncienMdp.Text = "Ancien mot de passe";
+            this.OldMdp.AutoSize = true;
+            this.OldMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OldMdp.Location = new System.Drawing.Point(233, 142);
+            this.OldMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.OldMdp.Name = "OldMdp";
+            this.OldMdp.Size = new System.Drawing.Size(153, 21);
+            this.OldMdp.TabIndex = 1;
+            this.OldMdp.Text = "Ancien mot de passe";
             // 
-            // NouveauMdp
+            // NewMdp
             // 
-            this.NouveauMdp.AutoSize = true;
-            this.NouveauMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NouveauMdp.Location = new System.Drawing.Point(233, 228);
-            this.NouveauMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.NouveauMdp.Name = "NouveauMdp";
-            this.NouveauMdp.Size = new System.Drawing.Size(173, 21);
-            this.NouveauMdp.TabIndex = 2;
-            this.NouveauMdp.Text = "Nouveau mot de passe ";
+            this.NewMdp.AutoSize = true;
+            this.NewMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NewMdp.Location = new System.Drawing.Point(233, 228);
+            this.NewMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NewMdp.Name = "NewMdp";
+            this.NewMdp.Size = new System.Drawing.Size(173, 21);
+            this.NewMdp.TabIndex = 2;
+            this.NewMdp.Text = "Nouveau mot de passe ";
             // 
-            // NouveauMdpBox
+            // NewMdpBox
             // 
-            this.NouveauMdpBox.Location = new System.Drawing.Point(429, 225);
-            this.NouveauMdpBox.Margin = new System.Windows.Forms.Padding(4);
-            this.NouveauMdpBox.Name = "NouveauMdpBox";
-            this.NouveauMdpBox.Size = new System.Drawing.Size(127, 29);
-            this.NouveauMdpBox.TabIndex = 3;
+            this.NewMdpBox.Location = new System.Drawing.Point(429, 225);
+            this.NewMdpBox.Margin = new System.Windows.Forms.Padding(4);
+            this.NewMdpBox.Name = "NewMdpBox";
+            this.NewMdpBox.Size = new System.Drawing.Size(127, 29);
+            this.NewMdpBox.TabIndex = 3;
             // 
-            // ConfirmationNouveauMdpBox
+            // ConfirmNewMdpBox
             // 
-            this.ConfirmationNouveauMdpBox.Location = new System.Drawing.Point(429, 311);
-            this.ConfirmationNouveauMdpBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ConfirmationNouveauMdpBox.Name = "ConfirmationNouveauMdpBox";
-            this.ConfirmationNouveauMdpBox.Size = new System.Drawing.Size(127, 29);
-            this.ConfirmationNouveauMdpBox.TabIndex = 5;
+            this.ConfirmNewMdpBox.Location = new System.Drawing.Point(429, 311);
+            this.ConfirmNewMdpBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmNewMdpBox.Name = "ConfirmNewMdpBox";
+            this.ConfirmNewMdpBox.Size = new System.Drawing.Size(127, 29);
+            this.ConfirmNewMdpBox.TabIndex = 5;
             // 
-            // ConfirmationNouveauMdp
+            // ConfirmNewMdp
             // 
-            this.ConfirmationNouveauMdp.AutoSize = true;
-            this.ConfirmationNouveauMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConfirmationNouveauMdp.Location = new System.Drawing.Point(131, 319);
-            this.ConfirmationNouveauMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ConfirmationNouveauMdp.Name = "ConfirmationNouveauMdp";
-            this.ConfirmationNouveauMdp.Size = new System.Drawing.Size(284, 21);
-            this.ConfirmationNouveauMdp.TabIndex = 4;
-            this.ConfirmationNouveauMdp.Text = "Confirmation du nouveau mot de passe";
+            this.ConfirmNewMdp.AutoSize = true;
+            this.ConfirmNewMdp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ConfirmNewMdp.Location = new System.Drawing.Point(131, 319);
+            this.ConfirmNewMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ConfirmNewMdp.Name = "ConfirmNewMdp";
+            this.ConfirmNewMdp.Size = new System.Drawing.Size(284, 21);
+            this.ConfirmNewMdp.TabIndex = 4;
+            this.ConfirmNewMdp.Text = "Confirmation du nouveau mot de passe";
             // 
-            // label4
+            // Title
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(334, 45);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(271, 28);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Changement de mot de passe";
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.Location = new System.Drawing.Point(334, 45);
+            this.Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(271, 28);
+            this.Title.TabIndex = 6;
+            this.Title.Text = "Changement de mot de passe";
             // 
-            // ConfirmerChangementMdp
+            // ConfirmChangeMdp
             // 
-            this.ConfirmerChangementMdp.Location = new System.Drawing.Point(474, 423);
-            this.ConfirmerChangementMdp.Name = "ConfirmerChangementMdp";
-            this.ConfirmerChangementMdp.Size = new System.Drawing.Size(120, 32);
-            this.ConfirmerChangementMdp.TabIndex = 7;
-            this.ConfirmerChangementMdp.Text = "Confirmer";
-            this.ConfirmerChangementMdp.UseVisualStyleBackColor = true;
-            this.ConfirmerChangementMdp.Click += new System.EventHandler(this.ConfirmerChangementMdp_Click);
+            this.ConfirmChangeMdp.Location = new System.Drawing.Point(474, 423);
+            this.ConfirmChangeMdp.Name = "ConfirmChangeMdp";
+            this.ConfirmChangeMdp.Size = new System.Drawing.Size(120, 32);
+            this.ConfirmChangeMdp.TabIndex = 7;
+            this.ConfirmChangeMdp.Text = "Confirmer";
+            this.ConfirmChangeMdp.UseVisualStyleBackColor = true;
+            this.ConfirmChangeMdp.Click += new System.EventHandler(this.ConfirmerChangementMdp_Click);
             // 
-            // EffacerChamps
+            // Clear
             // 
-            this.EffacerChamps.Location = new System.Drawing.Point(314, 423);
-            this.EffacerChamps.Name = "EffacerChamps";
-            this.EffacerChamps.Size = new System.Drawing.Size(120, 32);
-            this.EffacerChamps.TabIndex = 8;
-            this.EffacerChamps.Text = "Effacer";
-            this.EffacerChamps.UseVisualStyleBackColor = true;
-            this.EffacerChamps.Click += new System.EventHandler(this.EffacerChamps_Click);
+            this.Clear.Location = new System.Drawing.Point(314, 423);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(120, 32);
+            this.Clear.TabIndex = 8;
+            this.Clear.Text = "Effacer";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.EffacerChamps_Click);
             // 
-            // ChangementMotDePasse
+            // ChangeFormMdp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 630);
-            this.Controls.Add(this.EffacerChamps);
-            this.Controls.Add(this.ConfirmerChangementMdp);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.ConfirmationNouveauMdpBox);
-            this.Controls.Add(this.ConfirmationNouveauMdp);
-            this.Controls.Add(this.NouveauMdpBox);
-            this.Controls.Add(this.NouveauMdp);
-            this.Controls.Add(this.AncienMdp);
-            this.Controls.Add(this.AncienMdpBox);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.ConfirmChangeMdp);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.ConfirmNewMdpBox);
+            this.Controls.Add(this.ConfirmNewMdp);
+            this.Controls.Add(this.NewMdpBox);
+            this.Controls.Add(this.NewMdp);
+            this.Controls.Add(this.OldMdp);
+            this.Controls.Add(this.OldMdpBox);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ChangementMotDePasse";
-            this.Text = "ChangementMotDePasse";
-            this.Load += new System.EventHandler(this.ChangementMotDePasse_Load);
+            this.Name = "ChangeFormMdp";
+            this.Text = "Page de changement de mot de passe";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,14 +153,14 @@ namespace AutofactApp
 
         #endregion
 
-        private System.Windows.Forms.TextBox AncienMdpBox;
-        private System.Windows.Forms.Label AncienMdp;
-        private System.Windows.Forms.Label NouveauMdp;
-        private System.Windows.Forms.TextBox NouveauMdpBox;
-        private System.Windows.Forms.TextBox ConfirmationNouveauMdpBox;
-        private System.Windows.Forms.Label ConfirmationNouveauMdp;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button ConfirmerChangementMdp;
-        private System.Windows.Forms.Button EffacerChamps;
+        private System.Windows.Forms.TextBox OldMdpBox;
+        private System.Windows.Forms.Label OldMdp;
+        private System.Windows.Forms.Label NewMdp;
+        private System.Windows.Forms.TextBox NewMdpBox;
+        private System.Windows.Forms.TextBox ConfirmNewMdpBox;
+        private System.Windows.Forms.Label ConfirmNewMdp;
+        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Button ConfirmChangeMdp;
+        private System.Windows.Forms.Button Clear;
     }
 }
