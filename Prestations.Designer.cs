@@ -31,11 +31,6 @@ namespace AutofactApp
         {
             this.BackMenu = new System.Windows.Forms.Button();
             this.SelectServices = new System.Windows.Forms.DataGridView();
-            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddService = new System.Windows.Forms.Button();
             this.UpdateService = new System.Windows.Forms.Button();
             this.DeleteService = new System.Windows.Forms.Button();
@@ -43,13 +38,17 @@ namespace AutofactApp
             this.CategoryText = new System.Windows.Forms.TextBox();
             this.PriceText = new System.Windows.Forms.TextBox();
             this.LabelText = new System.Windows.Forms.TextBox();
-            this.Confirm = new System.Windows.Forms.Button();
             this.Category = new System.Windows.Forms.Label();
             this.Label = new System.Windows.Forms.Label();
             this.Details = new System.Windows.Forms.Label();
             this.Price = new System.Windows.Forms.Label();
             this.DetailsText = new System.Windows.Forms.RichTextBox();
             this.IdPrestationText = new System.Windows.Forms.TextBox();
+            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SelectServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +58,7 @@ namespace AutofactApp
             this.BackMenu.Location = new System.Drawing.Point(25, 39);
             this.BackMenu.Name = "BackMenu";
             this.BackMenu.Size = new System.Drawing.Size(124, 58);
-            this.BackMenu.TabIndex = 0;
+            this.BackMenu.TabIndex = 8;
             this.BackMenu.Text = "Retour au menu";
             this.BackMenu.UseVisualStyleBackColor = true;
             this.BackMenu.Click += new System.EventHandler(this.BackMenu_Click);
@@ -73,12 +72,141 @@ namespace AutofactApp
             this.Libelle,
             this.Description,
             this.PrixHt});
-            this.SelectServices.Location = new System.Drawing.Point(151, 535);
+            this.SelectServices.Location = new System.Drawing.Point(156, 535);
             this.SelectServices.Name = "SelectServices";
             this.SelectServices.RowTemplate.Height = 25;
-            this.SelectServices.Size = new System.Drawing.Size(544, 150);
-            this.SelectServices.TabIndex = 1;
-            this.SelectServices.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectServices_RowHeaderMouseClick);
+            this.SelectServices.Size = new System.Drawing.Size(444, 150);
+            this.SelectServices.TabIndex = 0;
+            this.SelectServices.TabStop = false;
+            this.SelectServices.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectServices_RowHeaderMouseClick);
+            // 
+            // AddService
+            // 
+            this.AddService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddService.Location = new System.Drawing.Point(786, 64);
+            this.AddService.Name = "AddService";
+            this.AddService.Size = new System.Drawing.Size(184, 54);
+            this.AddService.TabIndex = 5;
+            this.AddService.Text = "Ajouter une prestation";
+            this.AddService.UseVisualStyleBackColor = true;
+            this.AddService.Click += new System.EventHandler(this.AddService_Click);
+            // 
+            // UpdateService
+            // 
+            this.UpdateService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UpdateService.Location = new System.Drawing.Point(786, 124);
+            this.UpdateService.Name = "UpdateService";
+            this.UpdateService.Size = new System.Drawing.Size(184, 63);
+            this.UpdateService.TabIndex = 6;
+            this.UpdateService.Text = "Modifier la prestation";
+            this.UpdateService.UseVisualStyleBackColor = true;
+            this.UpdateService.Click += new System.EventHandler(this.UpdateService_Click);
+            // 
+            // DeleteService
+            // 
+            this.DeleteService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteService.Location = new System.Drawing.Point(786, 193);
+            this.DeleteService.Name = "DeleteService";
+            this.DeleteService.Size = new System.Drawing.Size(184, 63);
+            this.DeleteService.TabIndex = 7;
+            this.DeleteService.Text = "Supprimer la prestation";
+            this.DeleteService.UseVisualStyleBackColor = true;
+            this.DeleteService.Click += new System.EventHandler(this.DeleteService_Click);
+            // 
+            // Clear
+            // 
+            this.Clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Clear.Location = new System.Drawing.Point(367, 421);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(95, 36);
+            this.Clear.TabIndex = 9;
+            this.Clear.Text = "Effacer";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // CategoryText
+            // 
+            this.CategoryText.Location = new System.Drawing.Point(401, 140);
+            this.CategoryText.Name = "CategoryText";
+            this.CategoryText.Size = new System.Drawing.Size(156, 23);
+            this.CategoryText.TabIndex = 1;
+            // 
+            // PriceText
+            // 
+            this.PriceText.Location = new System.Drawing.Point(401, 344);
+            this.PriceText.Name = "PriceText";
+            this.PriceText.Size = new System.Drawing.Size(156, 23);
+            this.PriceText.TabIndex = 4;
+            // 
+            // LabelText
+            // 
+            this.LabelText.Location = new System.Drawing.Point(401, 190);
+            this.LabelText.Name = "LabelText";
+            this.LabelText.Size = new System.Drawing.Size(156, 23);
+            this.LabelText.TabIndex = 2;
+            // 
+            // Category
+            // 
+            this.Category.AutoSize = true;
+            this.Category.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Category.Location = new System.Drawing.Point(283, 142);
+            this.Category.Name = "Category";
+            this.Category.Size = new System.Drawing.Size(77, 21);
+            this.Category.TabIndex = 0;
+            this.Category.Text = "Categorie";
+            this.Category.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Label
+            // 
+            this.Label.AutoSize = true;
+            this.Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label.Location = new System.Drawing.Point(305, 190);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(55, 21);
+            this.Label.TabIndex = 0;
+            this.Label.Text = "Libelle";
+            this.Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Details
+            // 
+            this.Details.AutoSize = true;
+            this.Details.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Details.Location = new System.Drawing.Point(271, 246);
+            this.Details.Name = "Details";
+            this.Details.Size = new System.Drawing.Size(89, 21);
+            this.Details.TabIndex = 0;
+            this.Details.Text = "Description";
+            this.Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Price
+            // 
+            this.Price.AutoSize = true;
+            this.Price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Price.Location = new System.Drawing.Point(305, 344);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(36, 21);
+            this.Price.TabIndex = 0;
+            this.Price.Text = "Prix";
+            // 
+            // DetailsText
+            // 
+            this.DetailsText.Location = new System.Drawing.Point(401, 240);
+            this.DetailsText.Name = "DetailsText";
+            this.DetailsText.Size = new System.Drawing.Size(156, 67);
+            this.DetailsText.TabIndex = 0;
+            this.DetailsText.TabStop = false;
+            this.DetailsText.Text = "";
+            // 
+            // IdPrestationText
+            // 
+            this.IdPrestationText.Enabled = false;
+            this.IdPrestationText.Location = new System.Drawing.Point(401, 95);
+            this.IdPrestationText.Name = "IdPrestationText";
+            this.IdPrestationText.ReadOnly = true;
+            this.IdPrestationText.Size = new System.Drawing.Size(156, 23);
+            this.IdPrestationText.TabIndex = 0;
+            this.IdPrestationText.TabStop = false;
+            this.IdPrestationText.Visible = false;
             // 
             // IdPrestation
             // 
@@ -105,138 +233,6 @@ namespace AutofactApp
             this.PrixHt.HeaderText = "Prix";
             this.PrixHt.Name = "PrixHt";
             // 
-            // AddService
-            // 
-            this.AddService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddService.Location = new System.Drawing.Point(786, 64);
-            this.AddService.Name = "AddService";
-            this.AddService.Size = new System.Drawing.Size(184, 54);
-            this.AddService.TabIndex = 2;
-            this.AddService.Text = "Ajouter une prestation";
-            this.AddService.UseVisualStyleBackColor = true;
-            this.AddService.Click += new System.EventHandler(this.AddService_Click);
-            // 
-            // UpdateService
-            // 
-            this.UpdateService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UpdateService.Location = new System.Drawing.Point(786, 124);
-            this.UpdateService.Name = "UpdateService";
-            this.UpdateService.Size = new System.Drawing.Size(184, 63);
-            this.UpdateService.TabIndex = 3;
-            this.UpdateService.Text = "Modifier la prestation";
-            this.UpdateService.UseVisualStyleBackColor = true;
-            this.UpdateService.Click += new System.EventHandler(this.UpdateService_Click);
-            // 
-            // DeleteService
-            // 
-            this.DeleteService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteService.Location = new System.Drawing.Point(786, 193);
-            this.DeleteService.Name = "DeleteService";
-            this.DeleteService.Size = new System.Drawing.Size(184, 63);
-            this.DeleteService.TabIndex = 4;
-            this.DeleteService.Text = "Supprimer la prestation";
-            this.DeleteService.UseVisualStyleBackColor = true;
-            this.DeleteService.Click += new System.EventHandler(this.DeleteService_Click);
-            // 
-            // Clear
-            // 
-            this.Clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Clear.Location = new System.Drawing.Point(305, 425);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(95, 36);
-            this.Clear.TabIndex = 5;
-            this.Clear.Text = "Effacer";
-            this.Clear.UseVisualStyleBackColor = true;
-            // 
-            // CategoryText
-            // 
-            this.CategoryText.Location = new System.Drawing.Point(401, 140);
-            this.CategoryText.Name = "CategoryText";
-            this.CategoryText.Size = new System.Drawing.Size(156, 23);
-            this.CategoryText.TabIndex = 6;
-            // 
-            // PriceText
-            // 
-            this.PriceText.Location = new System.Drawing.Point(401, 344);
-            this.PriceText.Name = "PriceText";
-            this.PriceText.Size = new System.Drawing.Size(156, 23);
-            this.PriceText.TabIndex = 7;
-            // 
-            // LabelText
-            // 
-            this.LabelText.Location = new System.Drawing.Point(401, 190);
-            this.LabelText.Name = "LabelText";
-            this.LabelText.Size = new System.Drawing.Size(156, 23);
-            this.LabelText.TabIndex = 8;
-            // 
-            // Confirm
-            // 
-            this.Confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Confirm.Location = new System.Drawing.Point(470, 425);
-            this.Confirm.Name = "Confirm";
-            this.Confirm.Size = new System.Drawing.Size(95, 36);
-            this.Confirm.TabIndex = 10;
-            this.Confirm.Text = "Confirmer";
-            this.Confirm.UseVisualStyleBackColor = true;
-            // 
-            // Category
-            // 
-            this.Category.AutoSize = true;
-            this.Category.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Category.Location = new System.Drawing.Point(283, 142);
-            this.Category.Name = "Category";
-            this.Category.Size = new System.Drawing.Size(77, 21);
-            this.Category.TabIndex = 11;
-            this.Category.Text = "Categorie";
-            this.Category.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Label
-            // 
-            this.Label.AutoSize = true;
-            this.Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Label.Location = new System.Drawing.Point(305, 190);
-            this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(55, 21);
-            this.Label.TabIndex = 12;
-            this.Label.Text = "Libelle";
-            this.Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Details
-            // 
-            this.Details.AutoSize = true;
-            this.Details.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Details.Location = new System.Drawing.Point(271, 246);
-            this.Details.Name = "Details";
-            this.Details.Size = new System.Drawing.Size(89, 21);
-            this.Details.TabIndex = 13;
-            this.Details.Text = "Description";
-            this.Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Price
-            // 
-            this.Price.AutoSize = true;
-            this.Price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Price.Location = new System.Drawing.Point(305, 344);
-            this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(36, 21);
-            this.Price.TabIndex = 14;
-            this.Price.Text = "Prix";
-            // 
-            // DetailsText
-            // 
-            this.DetailsText.Location = new System.Drawing.Point(401, 240);
-            this.DetailsText.Name = "DetailsText";
-            this.DetailsText.Size = new System.Drawing.Size(156, 67);
-            this.DetailsText.TabIndex = 15;
-            this.DetailsText.Text = "";
-            // 
-            // IdPrestationText
-            // 
-            this.IdPrestationText.Location = new System.Drawing.Point(401, 95);
-            this.IdPrestationText.Name = "IdPrestationText";
-            this.IdPrestationText.Size = new System.Drawing.Size(156, 23);
-            this.IdPrestationText.TabIndex = 16;
-            // 
             // Prestations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -248,7 +244,6 @@ namespace AutofactApp
             this.Controls.Add(this.Details);
             this.Controls.Add(this.Label);
             this.Controls.Add(this.Category);
-            this.Controls.Add(this.Confirm);
             this.Controls.Add(this.LabelText);
             this.Controls.Add(this.PriceText);
             this.Controls.Add(this.CategoryText);
@@ -278,7 +273,6 @@ namespace AutofactApp
         private System.Windows.Forms.TextBox CategoryText;
         private System.Windows.Forms.TextBox PriceText;
         private System.Windows.Forms.TextBox LabelText;
-        private System.Windows.Forms.Button Confirm;
         private System.Windows.Forms.Label Category;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Label Details;

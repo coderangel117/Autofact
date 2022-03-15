@@ -13,6 +13,8 @@ namespace AutofactApp
 {
     public partial class Prestations : Form
     {
+        public object MessageBoxDefaultButtons { get; private set; }
+
         public Prestations()
         {
             InitializeComponent();
@@ -37,7 +39,6 @@ namespace AutofactApp
         }
         private void BackMenu_Click(object sender, EventArgs e)
         {
-
             Form Menu = new Menu();
             Menu.Show();
             this.Hide();
@@ -74,27 +75,39 @@ namespace AutofactApp
 
         private void DeleteService_Click(object sender, EventArgs e)
         {
-            string cs = "server=localhost;user=root;password=;database=autofact";
+            DialogResult res = MessageBox.Show("Voulez-vous vraiment supprimer cette prestation ? ", "Attention cette suppression est définitive !! ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (res == DialogResult.Yes)
+            {            string cs = "server=localhost;user=root;password=;database=autofact";
             MySqlConnection connection = new MySqlConnection(cs);
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("delete from prestation where idP= @id", connection);
-            cmd.Parameters.AddWithValue("@id", IdPrestationText);
+            cmd.Parameters.AddWithValue("@id", IdPrestationText.Text);
             cmd.ExecuteNonQuery();
             connection.Close();
-            MessageBox.Show(" La prestation a bien été supprimée");
-            Form Menu = new Menu();
-            Menu.Show();
-            this.Hide();
+                MessageBox.Show(" La prestation a bien été supprimée");
+                Form Menu = new Menu();
+                Menu.Show();
+                this.Hide();
+            }
+            else
+            {
+                this.Show();
+
+            }
         }
-    private void SelectServices_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-    {
-        IdPrestationText.Text = SelectServices.Rows[e.RowIndex].Cells[0].Value.ToString();
-        CategoryText.Text = SelectServices.Rows[e.RowIndex].Cells[1].Value.ToString();
-        LabelText.Text = SelectServices.Rows[e.RowIndex].Cells[2].Value.ToString();
-        DetailsText.Text = SelectServices.Rows[e.RowIndex].Cells[3].Value.ToString();
-        PriceText.Text = SelectServices.Rows[e.RowIndex].Cells[4].Value.ToString();
-        
-    }
+
+
+        private void SelectServices_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            {
+                IdPrestationText.Text = SelectServices.Rows[e.RowIndex].Cells[0].Value.ToString();
+                CategoryText.Text = SelectServices.Rows[e.RowIndex].Cells[1].Value.ToString();
+                LabelText.Text = SelectServices.Rows[e.RowIndex].Cells[2].Value.ToString();
+                DetailsText.Text = SelectServices.Rows[e.RowIndex].Cells[3].Value.ToString();
+                PriceText.Text = SelectServices.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+        }
+
         private void Clear_Click(object sender, EventArgs e)
         {
             IdPrestationText.Clear();
