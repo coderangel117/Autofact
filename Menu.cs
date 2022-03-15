@@ -17,10 +17,10 @@ namespace AutofactApp
             InitializeComponent();
         }
 
-        private void Clients_Click(object sender, EventArgs e)
+        private void Customers_Click(object sender, EventArgs e)
         {
-            Form Clients = new clients();
-            Clients.Show();
+            Form Customers = new clients();
+            Customers.Show();
             this.Hide();
         }
 
@@ -43,18 +43,26 @@ namespace AutofactApp
             }
         }
 
-        private void utilisateurs_Click(object sender, EventArgs e)
+        private void Users_Click(object sender, EventArgs e)
         {
-            Form ListeUtilisateurs = new utilisateurs();
-            ListeUtilisateurs.Show();
+            Form Users = new utilisateurs();
+            Users.Show();
             this.Hide();
         }
 
-        private void ChangementMdp_Click(object sender, EventArgs e)
+        private void ChangeMdp_Click(object sender, EventArgs e)
         {
 
             Form ChangeMdp = new ChangementMotDePasse();
             ChangeMdp.Show();
+            this.Hide();
+        }
+
+        private void Services_Click(object sender, EventArgs e)
+        {
+
+            Form services = new Prestations();
+            services.Show();
             this.Hide();
         }
     }

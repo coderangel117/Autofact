@@ -63,5 +63,10 @@ namespace AutofactApp
             Menu.Show();
             this.Hide();
         }
+
+        private void AjoutClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
