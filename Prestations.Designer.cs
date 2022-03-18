@@ -31,8 +31,12 @@ namespace AutofactApp
         {
             this.BackMenu = new System.Windows.Forms.Button();
             this.SelectServices = new System.Windows.Forms.DataGridView();
+            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddService = new System.Windows.Forms.Button();
-            this.UpdateService = new System.Windows.Forms.Button();
             this.DeleteService = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.CategoryText = new System.Windows.Forms.TextBox();
@@ -44,11 +48,7 @@ namespace AutofactApp
             this.Price = new System.Windows.Forms.Label();
             this.DetailsText = new System.Windows.Forms.RichTextBox();
             this.IdPrestationText = new System.Windows.Forms.TextBox();
-            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Confirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SelectServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,31 @@ namespace AutofactApp
             this.SelectServices.TabStop = false;
             this.SelectServices.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectServices_RowHeaderMouseClick);
             // 
+            // IdPrestation
+            // 
+            this.IdPrestation.HeaderText = "IdPrestation";
+            this.IdPrestation.Name = "IdPrestation";
+            // 
+            // Categorie
+            // 
+            this.Categorie.HeaderText = "Categorie";
+            this.Categorie.Name = "Categorie";
+            // 
+            // Libelle
+            // 
+            this.Libelle.HeaderText = "Libelle";
+            this.Libelle.Name = "Libelle";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // PrixHt
+            // 
+            this.PrixHt.HeaderText = "Prix";
+            this.PrixHt.Name = "PrixHt";
+            // 
             // AddService
             // 
             this.AddService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -90,17 +115,6 @@ namespace AutofactApp
             this.AddService.Text = "Ajouter une prestation";
             this.AddService.UseVisualStyleBackColor = true;
             this.AddService.Click += new System.EventHandler(this.AddService_Click);
-            // 
-            // UpdateService
-            // 
-            this.UpdateService.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UpdateService.Location = new System.Drawing.Point(786, 124);
-            this.UpdateService.Name = "UpdateService";
-            this.UpdateService.Size = new System.Drawing.Size(184, 63);
-            this.UpdateService.TabIndex = 6;
-            this.UpdateService.Text = "Modifier la prestation";
-            this.UpdateService.UseVisualStyleBackColor = true;
-            this.UpdateService.Click += new System.EventHandler(this.UpdateService_Click);
             // 
             // DeleteService
             // 
@@ -208,36 +222,23 @@ namespace AutofactApp
             this.IdPrestationText.TabStop = false;
             this.IdPrestationText.Visible = false;
             // 
-            // IdPrestation
+            // Confirm
             // 
-            this.IdPrestation.HeaderText = "IdPrestation";
-            this.IdPrestation.Name = "IdPrestation";
-            // 
-            // Categorie
-            // 
-            this.Categorie.HeaderText = "Categorie";
-            this.Categorie.Name = "Categorie";
-            // 
-            // Libelle
-            // 
-            this.Libelle.HeaderText = "Libelle";
-            this.Libelle.Name = "Libelle";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // PrixHt
-            // 
-            this.PrixHt.HeaderText = "Prix";
-            this.PrixHt.Name = "PrixHt";
+            this.Confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Confirm.Location = new System.Drawing.Point(505, 421);
+            this.Confirm.Name = "Confirm";
+            this.Confirm.Size = new System.Drawing.Size(95, 36);
+            this.Confirm.TabIndex = 10;
+            this.Confirm.Text = "Confirmer";
+            this.Confirm.UseVisualStyleBackColor = true;
+            this.Confirm.Click += new System.EventHandler(this.Confirm_Click);
             // 
             // Prestations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 722);
+            this.Controls.Add(this.Confirm);
             this.Controls.Add(this.IdPrestationText);
             this.Controls.Add(this.DetailsText);
             this.Controls.Add(this.Price);
@@ -249,7 +250,6 @@ namespace AutofactApp
             this.Controls.Add(this.CategoryText);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.DeleteService);
-            this.Controls.Add(this.UpdateService);
             this.Controls.Add(this.AddService);
             this.Controls.Add(this.SelectServices);
             this.Controls.Add(this.BackMenu);
@@ -267,7 +267,6 @@ namespace AutofactApp
         private System.Windows.Forms.Button BackMenu;
         private System.Windows.Forms.DataGridView SelectServices;
         private System.Windows.Forms.Button AddService;
-        private System.Windows.Forms.Button UpdateService;
         private System.Windows.Forms.Button DeleteService;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.TextBox CategoryText;
@@ -284,5 +283,6 @@ namespace AutofactApp
         private System.Windows.Forms.DataGridViewTextBoxColumn Libelle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrixHt;
+        private System.Windows.Forms.Button Confirm;
     }
 }

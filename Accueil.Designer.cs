@@ -48,6 +48,7 @@ namespace AutofactApp
             this.login.Size = new System.Drawing.Size(45, 21);
             this.login.TabIndex = 0;
             this.login.Text = "login";
+            this.login.UseMnemonic = false;
             // 
             // password
             // 
@@ -92,7 +93,7 @@ namespace AutofactApp
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(76, 37);
             this.ExitButton.TabIndex = 5;
-            this.ExitButton.Text = "Exit";
+            this.ExitButton.Text = "&Quitter";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -103,7 +104,8 @@ namespace AutofactApp
             this.ConfirmLog.Name = "ConfirmLog";
             this.ConfirmLog.Size = new System.Drawing.Size(76, 37);
             this.ConfirmLog.TabIndex = 3;
-            this.ConfirmLog.Text = "Confirm";
+            this.ConfirmLog.Text = "Confirmer";
+            this.ConfirmLog.UseMnemonic = false;
             this.ConfirmLog.UseVisualStyleBackColor = true;
             this.ConfirmLog.Click += new System.EventHandler(this.ConfirmLog_Click);
             // 
@@ -114,7 +116,8 @@ namespace AutofactApp
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 37);
             this.clear.TabIndex = 4;
-            this.clear.Text = "Clear";
+            this.clear.Text = "Effacer";
+            this.clear.UseMnemonic = false;
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 

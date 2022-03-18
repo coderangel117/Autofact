@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutofactApp
@@ -28,45 +22,43 @@ namespace AutofactApp
             string username, user_password;
             username = Logintext.Text;
             user_password = Passtext.Text;
+            string passwordHashed = BCrypt.Net.BCrypt.HashPassword(user_password);
 
-
-            try
-            {
+            if (username != "" && user_password !="" ) {
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 connection.Open();
-                string query = "select * from utilisateur where login = '" + Logintext.Text + "'AND password = '" + Passtext.Text + "'";
-                MySqlDataAdapter sda = new MySqlDataAdapter(query, connection);
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-                if (dtable.Rows.Count == 1)
+                MySqlCommand cmd = new MySqlCommand("select password from utilisateur where login = '" + username + "'", connection);
+                string mdpbdd = cmd.ExecuteScalar().ToString();
+
+                if (BCrypt.Net.BCrypt.Verify(user_password, mdpbdd))
                 {
-                    username = Logintext.Text;
-                    user_password = Passtext.Text;
-                    Form Menu = new Menu();
-                    Menu.Show();
+                    new Menu().Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid login details !! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Passtext.Clear();
+                    MessageBox.Show("l'identifiant ou le mot de passe est incorrect !! ", "Erreur d'authentification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Logintext.Clear();
+                    Passtext.Clear();
                     Logintext.Focus();
                 }
             }
-            catch
+            else
             {
-                MessageBox.Show("Error !! ");
+                MessageBox.Show("Les champts doivent être remplis !! ", "Erreur d'authentification !! ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logintext.Clear();
+                Passtext.Clear();
+                Logintext.Focus();
             }
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult res;
-            res = MessageBox.Show("Do you woant to exit ", "exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            res = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-            Application.Exit();
+                Application.Exit();
             }
             else
             {

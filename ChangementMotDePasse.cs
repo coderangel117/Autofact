@@ -20,39 +20,47 @@ namespace AutofactApp
 
         private void ChangementMotDePasse_Load(object sender, EventArgs e)
         {
-
+            LoginBox.Focus();
         }
-
         private void ConfirmerChangementMdp_Click(object sender, EventArgs e)
         {
-            if (LoginBox.Text != "" && NouveauMdpBox.Text != "" && ConfirmationNouveauMdpBox.Text != "" && AncienMdpBox.Text != "")
+            string Login = LoginBox.Text;
+            string Oldmdp = AncienMdpBox.Text;
+            string Newpwd = NouveauMdpBox.Text;
+            string ConfirmMdp = ConfirmationNouveauMdpBox.Text;
+
+            if (Login!= "" && Newpwd!= "" && ConfirmMdp!= "" && Oldmdp!= "")
             {
-                if (NouveauMdpBox.Text == ConfirmationNouveauMdpBox.Text) {
+                if (Newpwd == ConfirmMdp) {
 
                     string cs = "server=localhost;user=root;password=;database=autofact";
                     MySqlConnection connection = new MySqlConnection(cs);
                     connection.Open();
-                    string query = "select * from utilisateur where login = '" + LoginBox.Text + "'AND password = '" + AncienMdpBox.Text + "'";
-                    MySqlDataAdapter sda = new MySqlDataAdapter(query, connection);
-                    DataTable dtable = new DataTable();
-                    sda.Fill(dtable);
-                    if (dtable.Rows.Count == 1)
-                    {
-                        MySqlCommand cmd = new MySqlCommand("update utilisateur set password=@ConfirmMdp where password=@AncienMdp", connection);
-                        cmd.Parameters.AddWithValue("@AncienMdp", AncienMdpBox.Text);
-                        cmd.Parameters.AddWithValue("@ConfirmMdp", NouveauMdpBox.Text);
-                        cmd.ExecuteNonQuery();
-                        connection.Close();
-                        Form Menu = new Menu();
-                        Menu.Show();
-                        this.Hide();
-                        MessageBox.Show("Customer informations Updated Successfully");
-                    }
-                    else{
-                        MessageBox.Show("Invalid login details !! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MySqlCommand cmd = new MySqlCommand("select password from utilisateur where login = '" + Login+ "'", connection);
 
+                    string mdpbdd = cmd.ExecuteScalar().ToString();
+
+                    if (BCrypt.Net.BCrypt.Verify(Oldmdp, mdpbdd))
+                    {
+                        /*new Menu().Show();
+                        this.Hide();*/
+                        MessageBox.Show((BCrypt.Net.BCrypt.Verify(Oldmdp, mdpbdd).ToString()));
                     }
-                }else
+                    else
+                    {
+                        MessageBox.Show("l'ancien mot de passe est incorrect !! ", "Erreur d'authentification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                     MySqlCommand update = new MySqlCommand("update utilisateur set password=@ConfirmMdp where password=@AncienMdp", connection);
+                     update.Parameters.AddWithValue("@AncienMdp", mdpbdd);
+                     string NewPasswordHashed = BCrypt.Net.BCrypt.HashPassword(Newpwd);
+                     update.Parameters.AddWithValue("@ConfirmMdp", NewPasswordHashed);
+                     update.ExecuteNonQuery();
+                     connection.Close();
+                     new Menu().Show();
+                     this.Hide();
+                     MessageBox.Show("Customer informations Updated Successfully");
+                }
+                else
                 {
                     MessageBox.Show("Les deux mdp doivent être identiques !! ");
                 }
@@ -62,6 +70,7 @@ namespace AutofactApp
 
             }
         }
+
 
         private void EffacerChamps_Click(object sender, EventArgs e)
         {

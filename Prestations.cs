@@ -46,31 +46,15 @@ namespace AutofactApp
 
         private void AddService_Click(object sender, EventArgs e)
         {
-            Form ajoutClient = new AjoutClient();
-            ajoutClient.Show();
-            this.Hide();
+            Form ajoutP = new AjoutPrestation();
+            ajoutP.Show();
+            Label label1 = new Label();
+            ajoutP.Controls.Add(label1);
         }
 
         private void UpdateService_Click(object sender, EventArgs e)
         {
-            if (LabelText.Text != "" && DetailsText.Text != "")
-            {
-                string cs = "server=localhost;user=root;password=;database=autofact";
-                MySqlConnection connection = new MySqlConnection(cs);
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand("update prestation set libelle=@Label, Description=@Details where idP=@Id", connection);
-                cmd.Parameters.AddWithValue("@Label", LabelText.Text);
-                cmd.Parameters.AddWithValue("@Details", DetailsText.Text);
-                Form Menu = new Menu();
-                Menu.Show();
-                this.Hide();
-                MessageBox.Show("Les informations de la prestations ont bien été modifiées");
-            }
-            else
-            {
-                MessageBox.Show("Vous devez saisir les informations ");
 
-            }
         }
 
         private void DeleteService_Click(object sender, EventArgs e)
@@ -92,11 +76,8 @@ namespace AutofactApp
             else
             {
                 this.Show();
-
             }
         }
-
-
         private void SelectServices_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             {
@@ -115,6 +96,28 @@ namespace AutofactApp
             LabelText.Clear();
             DetailsText.Clear();
             PriceText.Clear();
+        }
+
+        private void Confirm_Click(object sender, EventArgs e)
+        {
+            if (LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "")
+            {
+                string cs = "server=localhost;user=root;password=;database=autofact";
+                MySqlConnection connection = new MySqlConnection(cs);
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("update prestation set libelle=@Label, Description=@Details, PrixHT=@price where idP=@Id", connection);
+                cmd.Parameters.AddWithValue("@Label", LabelText.Text);
+                cmd.Parameters.AddWithValue("@Details", DetailsText.Text);
+                cmd.Parameters.AddWithValue("@Price", PriceText.Text);
+                //   new ModifierPrestation().Show();
+                //  this.Hide();
+                //MessageBox.Show("Les informations de la prestations ont bien été modifiées");
+            }
+            else
+            {
+                MessageBox.Show("Vous devez saisir les informations ");
+
+            }
         }
     }
 }

@@ -52,17 +52,13 @@ namespace AutofactApp
 
         private void ChangeMdp_Click(object sender, EventArgs e)
         {
-
-            Form ChangeMdp = new ChangementMotDePasse();
-            ChangeMdp.Show();
+            new ChangementMotDePasse().Show();
             this.Hide();
         }
 
         private void Services_Click(object sender, EventArgs e)
         {
-
-            Form services = new Prestations();
-            services.Show();
+            new Prestations().Show();
             this.Hide();
         }
     }
