@@ -35,6 +35,7 @@ namespace AutofactApp
             this.Users = new System.Windows.Forms.Button();
             this.ChangeMdp = new System.Windows.Forms.Button();
             this.Services = new System.Windows.Forms.Button();
+            this.ServicesList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Customers
@@ -100,11 +101,21 @@ namespace AutofactApp
             this.Services.UseVisualStyleBackColor = true;
             this.Services.Click += new System.EventHandler(this.Services_Click);
             // 
+            // ServicesList
+            // 
+            this.ServicesList.FormattingEnabled = true;
+            this.ServicesList.ItemHeight = 21;
+            this.ServicesList.Location = new System.Drawing.Point(311, 211);
+            this.ServicesList.Name = "ServicesList";
+            this.ServicesList.Size = new System.Drawing.Size(134, 25);
+            this.ServicesList.TabIndex = 8;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 446);
+            this.Controls.Add(this.ServicesList);
             this.Controls.Add(this.Services);
             this.Controls.Add(this.ChangeMdp);
             this.Controls.Add(this.Users);
@@ -127,5 +138,6 @@ namespace AutofactApp
         private System.Windows.Forms.Button Users;
         private System.Windows.Forms.Button ChangeMdp;
         private System.Windows.Forms.Button Services;
+        private System.Windows.Forms.ListBox ServicesList;
     }
 }

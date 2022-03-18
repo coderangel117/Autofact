@@ -119,7 +119,6 @@ namespace AutofactApp
             this.Controls.Add(this.NewLogin);
             this.Name = "AjoutUtilisateur";
             this.Text = "AjoutUtilisateur";
-            this.Load += new System.EventHandler(this.NouveauUtilisateur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

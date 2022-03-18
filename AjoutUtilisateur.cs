@@ -17,11 +17,6 @@ namespace AutofactApp
         {
             InitializeComponent();
         }
-
-        private void NouveauUtilisateur_Load(object sender, EventArgs e)
-        {
-
-        }
         private void ConfirmAdd_Click(object sender, EventArgs e)
         {
             string username, user_password;
@@ -29,12 +24,14 @@ namespace AutofactApp
             user_password = NewPassText.Text;
             if (NewLoginText.Text != "" && NewPassText.Text != "" )
             {
+                string passwordHashed = BCrypt.Net.BCrypt.HashPassword(user_password);
+
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 MySqlCommand cmd = new MySqlCommand("insert into utilisateur(login,password) values(@login, @password)", connection);
                 connection.Open();
-                cmd.Parameters.AddWithValue("@login", NewLoginText.Text);
-                cmd.Parameters.AddWithValue("@password", NewPassText.Text);
+                cmd.Parameters.AddWithValue("@login", user_password);
+                cmd.Parameters.AddWithValue("@password", passwordHashed);
                 cmd.ExecuteNonQuery();
                 connection.Close();
                 DialogResult res;
