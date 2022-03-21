@@ -28,7 +28,7 @@ namespace AutofactApp
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("select password from utilisateur where login = '" + username + "'", connection);
+                MySqlCommand cmd = new("select password from utilisateur where login = '" + username + "'", connection);
                 string mdpbdd = cmd.ExecuteScalar().ToString();
 
                 if (BCrypt.Net.BCrypt.Verify(user_password, mdpbdd))

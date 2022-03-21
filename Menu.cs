@@ -32,7 +32,7 @@ namespace AutofactApp
         private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult res;
-            res = MessageBox.Show("Do you want to exit ", "exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            res = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
                 Application.Exit();
