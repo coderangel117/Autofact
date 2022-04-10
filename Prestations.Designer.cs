@@ -31,11 +31,6 @@ namespace AutofactApp
         {
             this.BackMenu = new System.Windows.Forms.Button();
             this.SelectServices = new System.Windows.Forms.DataGridView();
-            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddService = new System.Windows.Forms.Button();
             this.DeleteService = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
@@ -49,6 +44,11 @@ namespace AutofactApp
             this.DetailsText = new System.Windows.Forms.RichTextBox();
             this.IdPrestationText = new System.Windows.Forms.TextBox();
             this.Confirm = new System.Windows.Forms.Button();
+            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SelectServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,38 +72,13 @@ namespace AutofactApp
             this.Libelle,
             this.Description,
             this.PrixHt});
-            this.SelectServices.Location = new System.Drawing.Point(156, 535);
+            this.SelectServices.Location = new System.Drawing.Point(190, 496);
             this.SelectServices.Name = "SelectServices";
             this.SelectServices.RowTemplate.Height = 25;
-            this.SelectServices.Size = new System.Drawing.Size(444, 150);
+            this.SelectServices.Size = new System.Drawing.Size(641, 205);
             this.SelectServices.TabIndex = 0;
             this.SelectServices.TabStop = false;
             this.SelectServices.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectServices_RowHeaderMouseClick);
-            // 
-            // IdPrestation
-            // 
-            this.IdPrestation.HeaderText = "IdPrestation";
-            this.IdPrestation.Name = "IdPrestation";
-            // 
-            // Categorie
-            // 
-            this.Categorie.HeaderText = "Categorie";
-            this.Categorie.Name = "Categorie";
-            // 
-            // Libelle
-            // 
-            this.Libelle.HeaderText = "Libelle";
-            this.Libelle.Name = "Libelle";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // PrixHt
-            // 
-            this.PrixHt.HeaderText = "Prix";
-            this.PrixHt.Name = "PrixHt";
             // 
             // AddService
             // 
@@ -233,6 +208,36 @@ namespace AutofactApp
             this.Confirm.UseVisualStyleBackColor = true;
             this.Confirm.Click += new System.EventHandler(this.Confirm_Click);
             // 
+            // IdPrestation
+            // 
+            this.IdPrestation.HeaderText = "IdPrestation";
+            this.IdPrestation.Name = "IdPrestation";
+            this.IdPrestation.Visible = false;
+            this.IdPrestation.Width = 150;
+            // 
+            // Categorie
+            // 
+            this.Categorie.HeaderText = "Categorie";
+            this.Categorie.Name = "Categorie";
+            // 
+            // Libelle
+            // 
+            this.Libelle.HeaderText = "Libelle";
+            this.Libelle.Name = "Libelle";
+            this.Libelle.Width = 150;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.Width = 200;
+            // 
+            // PrixHt
+            // 
+            this.PrixHt.HeaderText = "Prix";
+            this.PrixHt.Name = "PrixHt";
+            this.PrixHt.Width = 150;
+            // 
             // Prestations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -278,11 +283,11 @@ namespace AutofactApp
         private System.Windows.Forms.Label Price;
         private System.Windows.Forms.RichTextBox DetailsText;
         private System.Windows.Forms.TextBox IdPrestationText;
+        private System.Windows.Forms.Button Confirm;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPrestation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categorie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libelle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrixHt;
-        private System.Windows.Forms.Button Confirm;
     }
 }
