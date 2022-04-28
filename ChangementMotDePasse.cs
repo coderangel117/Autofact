@@ -40,16 +40,11 @@ namespace AutofactApp
 
                     string mdpbdd = cmd.ExecuteScalar().ToString();
 
-                    if (BCrypt.Net.BCrypt.Verify(Oldmdp, mdpbdd))
-                    {
-                        /*new Menu().Show();
-                        this.Hide();*/
-                        MessageBox.Show((BCrypt.Net.BCrypt.Verify(Oldmdp, mdpbdd).ToString()));
-                    }
-                    else
+                    if (BCrypt.Net.BCrypt.Verify(Oldmdp, mdpbdd) == false)
                     {
                         MessageBox.Show("l'ancien mot de passe est incorrect !! ", "Erreur d'authentification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
                      MySqlCommand update = new MySqlCommand("update utilisateur set password=@ConfirmMdp where password=@AncienMdp", connection);
                      update.Parameters.AddWithValue("@AncienMdp", mdpbdd);
                      string NewPasswordHashed = BCrypt.Net.BCrypt.HashPassword(Newpwd);
@@ -58,7 +53,7 @@ namespace AutofactApp
                      connection.Close();
                      new Menu().Show();
                      this.Hide();
-                     MessageBox.Show("Customer informations Updated Successfully");
+                     MessageBox.Show("Le mot de passe a bien été changé");
                 }
                 else
                 {

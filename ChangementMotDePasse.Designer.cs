@@ -48,8 +48,9 @@ namespace AutofactApp
             this.AncienMdpBox.Location = new System.Drawing.Point(499, 219);
             this.AncienMdpBox.Margin = new System.Windows.Forms.Padding(4);
             this.AncienMdpBox.Name = "AncienMdpBox";
+            this.AncienMdpBox.PasswordChar = '*';
             this.AncienMdpBox.Size = new System.Drawing.Size(127, 29);
-            this.AncienMdpBox.TabIndex = 0;
+            this.AncienMdpBox.TabIndex = 2;
             // 
             // AncienMdp
             // 
@@ -78,6 +79,7 @@ namespace AutofactApp
             this.NouveauMdpBox.Location = new System.Drawing.Point(499, 305);
             this.NouveauMdpBox.Margin = new System.Windows.Forms.Padding(4);
             this.NouveauMdpBox.Name = "NouveauMdpBox";
+            this.NouveauMdpBox.PasswordChar = '*';
             this.NouveauMdpBox.Size = new System.Drawing.Size(127, 29);
             this.NouveauMdpBox.TabIndex = 3;
             // 
@@ -86,8 +88,9 @@ namespace AutofactApp
             this.ConfirmationNouveauMdpBox.Location = new System.Drawing.Point(499, 391);
             this.ConfirmationNouveauMdpBox.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmationNouveauMdpBox.Name = "ConfirmationNouveauMdpBox";
+            this.ConfirmationNouveauMdpBox.PasswordChar = '*';
             this.ConfirmationNouveauMdpBox.Size = new System.Drawing.Size(127, 29);
-            this.ConfirmationNouveauMdpBox.TabIndex = 5;
+            this.ConfirmationNouveauMdpBox.TabIndex = 4;
             // 
             // ConfirmationNouveauMdp
             // 
@@ -116,7 +119,7 @@ namespace AutofactApp
             this.ConfirmerChangementMdp.Location = new System.Drawing.Point(544, 503);
             this.ConfirmerChangementMdp.Name = "ConfirmerChangementMdp";
             this.ConfirmerChangementMdp.Size = new System.Drawing.Size(120, 32);
-            this.ConfirmerChangementMdp.TabIndex = 7;
+            this.ConfirmerChangementMdp.TabIndex = 5;
             this.ConfirmerChangementMdp.Text = "Confirmer";
             this.ConfirmerChangementMdp.UseVisualStyleBackColor = true;
             this.ConfirmerChangementMdp.Click += new System.EventHandler(this.ConfirmerChangementMdp_Click);
@@ -126,7 +129,7 @@ namespace AutofactApp
             this.EffacerChamps.Location = new System.Drawing.Point(384, 503);
             this.EffacerChamps.Name = "EffacerChamps";
             this.EffacerChamps.Size = new System.Drawing.Size(120, 32);
-            this.EffacerChamps.TabIndex = 8;
+            this.EffacerChamps.TabIndex = 6;
             this.EffacerChamps.Text = "Effacer";
             this.EffacerChamps.UseVisualStyleBackColor = true;
             this.EffacerChamps.Click += new System.EventHandler(this.EffacerChamps_Click);
@@ -136,7 +139,7 @@ namespace AutofactApp
             this.RetourMenu.Location = new System.Drawing.Point(27, 31);
             this.RetourMenu.Name = "RetourMenu";
             this.RetourMenu.Size = new System.Drawing.Size(162, 32);
-            this.RetourMenu.TabIndex = 9;
+            this.RetourMenu.TabIndex = 7;
             this.RetourMenu.Text = "Retour au menu";
             this.RetourMenu.UseVisualStyleBackColor = true;
             this.RetourMenu.Click += new System.EventHandler(this.RetourMenu_Click);
@@ -146,7 +149,7 @@ namespace AutofactApp
             this.LoginBox.Location = new System.Drawing.Point(499, 142);
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(127, 29);
-            this.LoginBox.TabIndex = 10;
+            this.LoginBox.TabIndex = 1;
             // 
             // Login
             // 
