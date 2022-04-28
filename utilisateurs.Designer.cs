@@ -35,7 +35,6 @@ namespace AutofactApp
             this.SelectUtilisateur = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AjouterUtilisateur = new System.Windows.Forms.Button();
             this.IdUtilisateur = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SelectUtilisateur)).BeginInit();
             this.SuspendLayout();
@@ -99,17 +98,6 @@ namespace AutofactApp
             this.login.Name = "login";
             this.login.ReadOnly = true;
             // 
-            // AjouterUtilisateur
-            // 
-            this.AjouterUtilisateur.Location = new System.Drawing.Point(692, 118);
-            this.AjouterUtilisateur.Margin = new System.Windows.Forms.Padding(2);
-            this.AjouterUtilisateur.Name = "AjouterUtilisateur";
-            this.AjouterUtilisateur.Size = new System.Drawing.Size(126, 23);
-            this.AjouterUtilisateur.TabIndex = 39;
-            this.AjouterUtilisateur.Text = "Ajouter";
-            this.AjouterUtilisateur.UseVisualStyleBackColor = true;
-            this.AjouterUtilisateur.Click += new System.EventHandler(this.AjouterUtilisateur_Click);
-            // 
             // IdUtilisateur
             // 
             this.IdUtilisateur.Enabled = false;
@@ -126,7 +114,6 @@ namespace AutofactApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 550);
             this.Controls.Add(this.IdUtilisateur);
-            this.Controls.Add(this.AjouterUtilisateur);
             this.Controls.Add(this.SupprimerUtilisateur);
             this.Controls.Add(this.BackMenu);
             this.Controls.Add(this.label1);
@@ -145,7 +132,6 @@ namespace AutofactApp
         private System.Windows.Forms.Button BackMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView SelectUtilisateur;
-        private System.Windows.Forms.Button AjouterUtilisateur;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
         private System.Windows.Forms.TextBox IdUtilisateur;
