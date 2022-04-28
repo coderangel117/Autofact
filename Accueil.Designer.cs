@@ -37,6 +37,7 @@ namespace AutofactApp
             this.ExitButton = new System.Windows.Forms.Button();
             this.ConfirmLog = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
+            this.newUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // login
@@ -100,9 +101,9 @@ namespace AutofactApp
             // ConfirmLog
             // 
             this.ConfirmLog.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConfirmLog.Location = new System.Drawing.Point(346, 290);
+            this.ConfirmLog.Location = new System.Drawing.Point(331, 325);
             this.ConfirmLog.Name = "ConfirmLog";
-            this.ConfirmLog.Size = new System.Drawing.Size(76, 37);
+            this.ConfirmLog.Size = new System.Drawing.Size(91, 37);
             this.ConfirmLog.TabIndex = 3;
             this.ConfirmLog.Text = "Confirmer";
             this.ConfirmLog.UseMnemonic = false;
@@ -112,20 +113,32 @@ namespace AutofactApp
             // clear
             // 
             this.clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clear.Location = new System.Drawing.Point(234, 290);
+            this.clear.Location = new System.Drawing.Point(219, 325);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(75, 37);
+            this.clear.Size = new System.Drawing.Size(77, 37);
             this.clear.TabIndex = 4;
             this.clear.Text = "Effacer";
             this.clear.UseMnemonic = false;
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
+            // newUser
+            // 
+            this.newUser.AutoSize = true;
+            this.newUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.newUser.Location = new System.Drawing.Point(209, 281);
+            this.newUser.Name = "newUser";
+            this.newUser.Size = new System.Drawing.Size(257, 15);
+            this.newUser.TabIndex = 6;
+            this.newUser.Text = "si vous n\'avez pas encore de compte, cliquez ici";
+            this.newUser.Click += new System.EventHandler(this.newUser_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.newUser);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.ConfirmLog);
             this.Controls.Add(this.ExitButton);
@@ -134,7 +147,6 @@ namespace AutofactApp
             this.Controls.Add(this.Logintext);
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "Accueil";
             this.Text = "Accueil";
@@ -154,5 +166,7 @@ namespace AutofactApp
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button ConfirmLog;
         private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label newUser;
     }
 }

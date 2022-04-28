@@ -42,14 +42,6 @@ namespace AutofactApp
                 SelectUtilisateur.Rows.Add(values);
             }
         }
-
-        private void AjouterUtilisateur_Click(object sender, EventArgs e)
-        {
-            Form AjoutUtilisateur = new AjoutUtilisateur();
-            AjoutUtilisateur.Show();
-            this.Hide();
-        }
-
         private void SupprimerUtilisateur_Click(object sender, EventArgs e)
         {
             string cs = "server=localhost;user=root;password=;database=autofact";

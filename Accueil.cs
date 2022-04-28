@@ -71,5 +71,10 @@ namespace AutofactApp
             Logintext.Clear();
             Logintext.Focus();
         }
+
+        private void newUser_Click(object sender, EventArgs e)
+        {
+            new Compte().Show();
+        }
     }
 }

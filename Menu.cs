@@ -61,5 +61,11 @@ namespace AutofactApp
             new Prestations().Show();
             this.Hide();
         }
+
+        private void AddCmd_Click(object sender, EventArgs e)
+        {
+            new AjoutCommande().Show();
+            this.Hide();
+        }
     }
 }
