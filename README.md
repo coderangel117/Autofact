@@ -45,5 +45,4 @@ Contributors
 
 ===========================================================================
 
-    Rochette Adeline alias @adelinerochette
-    Chevrier Clément alias @RedOren28
+    PERINO Gabriel  @coderangell117
