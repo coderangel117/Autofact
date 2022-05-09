@@ -4,15 +4,20 @@ AutoFact
 
 Prerequisites and Installation
 ===================================
-    Visual Studio 2019 or 2022  
+[download Visual Studio ](https://visualstudio.microsoft.com/fr/)  
 [laragon]( https://laragon.org/download/)  
 [wamp](https://www.wampserver.com)  
-or other local server available on Windows  
-
+    
     Unpack the folder if not already done
     Insert the folder AutoFact in the input directory of your Visual Studio (optional)
     Import the .sql file into PhpMyAdmin (PhpMyAdmin is included in WAMP)
     Go to http://localhost/phpmyadmin
+
+Warning ! 
+===================================
+    The default SGBD  for laragon is PostgreSQL, if you want to change it  
+
+## Go to my [gist](https://gist.github.com/coderangel117/8ba449dd0f1328e87c93296e2b6427ce)
 
 Access to the code source repository
 ===================================
