@@ -30,7 +30,7 @@ Launch the application
 To retrieve the database script
 ===================================
     Go to the doc_bdd diretory
-    you'll find MDC MLR files and the sql script
+    you'll find MCD MLR files and the sql script
     download and import it in your SGBD
 Contributors
 ===================================
