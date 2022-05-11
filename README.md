@@ -9,7 +9,7 @@ Prerequisites and Installation
  Istall local server like [laragon](https://laragon.org/download/)  or [wamp](https://www.wampserver.com)  
     
 Unpack the folder if not already done
-Insert the folder AutoFact in the input directory of your Visual Studio (optional)
+Insert the folder AutoFact in the input directory of your Visual Studio (optional)  
 Import the .sql file into PhpMyAdmin (PhpMyAdmin is included in WAMP)
 Go to http://localhost/phpmyadmin
 
