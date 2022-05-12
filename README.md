@@ -1,15 +1,15 @@
 AutoFact
-
+===================================
     AutoFact is a software designed to simplify invoicing for self-employed
 
-#Prerequisites and Installation
 
+Prerequisites and Installation
+===================================
 [download Visual Studio ](https://visualstudio.microsoft.com/fr/)  
-[laragon]( https://laragon.org/download/)  
-[wamp](https://www.wampserver.com)  
+ Istall local server like [laragon](https://laragon.org/download/)  or [wamp](https://www.wampserver.com)  
     
 Unpack the folder if not already done
-Insert the folder AutoFact in the input directory of your Visual Studio (optional)
+Insert the folder AutoFact in the input directory of your Visual Studio (optional)  
 Import the .sql file into PhpMyAdmin (PhpMyAdmin is included in WAMP)
 Go to http://localhost/phpmyadmin
 
@@ -30,7 +30,7 @@ Launch the application
 To retrieve the database script
 ===================================
     Go to the doc_bdd diretory
-    you'll find MDC MLR files and the sql script
+    you'll find MCD MLR files and the sql script
     download and import it in your SGBD
 Contributors
 ===================================
