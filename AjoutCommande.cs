@@ -138,8 +138,10 @@ namespace AutofactApp
                 {
                     float Quantity = float.Parse(NewQuantityText.Text);
                     float Price = float.Parse(NewPriceText.Text);
-                    float TotalPrice = Quantity * Price;
-                    TotalPriceText.Text = TotalPrice.ToString();
+
+
+                    TotalPriceText.Text = CalculTotalPriceCmd(Quantity, Price).ToString();
+
                 }
                 else
                 {
@@ -148,11 +150,13 @@ namespace AutofactApp
             }
             else
             {
-               TotalPriceText.Text = "";
+                TotalPriceText.Text = "";
             }
-            
         }
-
+        public float CalculTotalPriceCmd(float Quantity, float Price)
+        {
+            return Quantity * Price;
+        }
         private void Radioservice_CheckedChanged(object sender, EventArgs e)
         {
             selectService.Items.Clear();
