@@ -46,7 +46,7 @@ namespace AutofactApp
             }
             else
             {
-                MessageBox.Show("Les champts doivent être remplis !! ", "Erreur d'authentification !! ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Les champs doivent être remplis !! ", "Erreur d'authentification !! ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logintext.Clear();
                 Passtext.Clear();
                 Logintext.Focus();
