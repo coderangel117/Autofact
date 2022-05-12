@@ -53,21 +53,21 @@ namespace AutofactApp
             // Logout
             // 
             this.Logout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Logout.Location = new System.Drawing.Point(650, 99);
+            this.Logout.Location = new System.Drawing.Point(740, 181);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(94, 33);
+            this.Logout.Size = new System.Drawing.Size(127, 44);
             this.Logout.TabIndex = 3;
-            this.Logout.Text = "Logout";
+            this.Logout.Text = "déconnexion";
             this.Logout.UseVisualStyleBackColor = true;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(650, 34);
+            this.ExitButton.Location = new System.Drawing.Point(740, 36);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(96, 27);
+            this.ExitButton.Size = new System.Drawing.Size(127, 44);
             this.ExitButton.TabIndex = 4;
-            this.ExitButton.Text = "Exit";
+            this.ExitButton.Text = "Quitter";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -120,12 +120,13 @@ namespace AutofactApp
             this.ListCmd.TabIndex = 9;
             this.ListCmd.Text = "liste des commandes";
             this.ListCmd.UseVisualStyleBackColor = true;
+            this.ListCmd.Click += new System.EventHandler(this.ListCmd_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 446);
+            this.ClientSize = new System.Drawing.Size(925, 520);
             this.Controls.Add(this.ListCmd);
             this.Controls.Add(this.AddCmd);
             this.Controls.Add(this.Services);

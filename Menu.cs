@@ -67,5 +67,11 @@ namespace AutofactApp
             new AjoutCommande().Show();
             this.Hide();
         }
+
+        private void ListCmd_Click(object sender, EventArgs e)
+        {
+            new commandesparclient().Show();
+            this.Hide();
+        }
     }
 }
