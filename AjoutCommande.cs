@@ -153,9 +153,9 @@ namespace AutofactApp
                 TotalPriceText.Text = "";
             }
         }
-        public float CalculTotalPriceCmd(float Quantity, float Price)
+        public static float CalculTotalPriceCmd(float Quantity, float Price)
         {
-            return Quantity * Price;
+            return (float)(Quantity * Price * 1.2);
         }
         private void Radioservice_CheckedChanged(object sender, EventArgs e)
         {
