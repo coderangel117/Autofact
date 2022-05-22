@@ -24,7 +24,7 @@ namespace AutofactApp
             adapt.Fill(categ);
             comboBox1.DataSource = categ;
             */
-            MySqlCommand requete = new("select libelle from categorie");
+            MySqlCommand requete = new("select libelleCateg from categorie");
             requete.Connection = connection;
             MySqlDataReader reader = requete.ExecuteReader();
 
@@ -55,21 +55,23 @@ namespace AutofactApp
                     string cs = "server=localhost;user=root;password=;database=autofact";
                     MySqlConnection connection = new MySqlConnection(cs);
                     connection.Open();
-                    MySqlCommand id = new MySqlCommand("select Id from categorie where Libelle = '" + category + "'", connection);
-                    var test = id.ExecuteNonQuery();
-                    if (test == 0)
+                    MySqlCommand idcategcmd = new MySqlCommand("select Id from categorie where LibelleCateg =@category", connection);
+                    idcategcmd.Parameters.AddWithValue("@category", category);
+                    var nbcateg = idcategcmd.ExecuteNonQuery();
+                    if (nbcateg == 0)
                     {
                         MessageBox.Show("Nous n'avons pas trouvé de catégorie correspondante...");
 
                     }
                     else
                     {
-                        object idcateg = id.ExecuteScalar();
-                        MySqlCommand cmd = new MySqlCommand("insert into prestation(IdCateg, Libelle, Description, PrixHt) values(@category, @label,@details, @price )", connection);
+                        object idcateg = idcategcmd.ExecuteScalar();
+                        MySqlCommand cmd = new MySqlCommand("insert into prestation(IdCateg, LibellePrestation, Description, PrixHt, Tva) values(@category, @label,@details, @price, @tva)", connection);
                         cmd.Parameters.AddWithValue("@category", idcateg);
                         cmd.Parameters.AddWithValue("@label", label);
                         cmd.Parameters.AddWithValue("@details", details);
                         cmd.Parameters.AddWithValue("@price", price);
+                        cmd.Parameters.AddWithValue("@tva", 20);
                         cmd.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show("La nouvelle prestation a bien été enregistrée");
@@ -77,10 +79,14 @@ namespace AutofactApp
                         this.Hide();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Vous avez dépassé le nombre de caractère autorisé");
+                }
             }
             else
             {
-                MessageBox.Show("Please enter mandatory details!");
+                MessageBox.Show(" Veuillez entrer les informations avant de valider ! ");
                 LabelText.Clear();
                 DetailsText.Clear();
                 PriceText.Clear();

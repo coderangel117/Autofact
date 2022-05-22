@@ -40,12 +40,14 @@ namespace AutofactApp
             this.Clear = new System.Windows.Forms.Button();
             this.BackMenu = new System.Windows.Forms.Button();
             this.CategoryText = new System.Windows.Forms.ComboBox();
+            this.Tva = new System.Windows.Forms.Label();
+            this.TvaText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Confirm
             // 
             this.Confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Confirm.Location = new System.Drawing.Point(470, 348);
+            this.Confirm.Location = new System.Drawing.Point(459, 387);
             this.Confirm.Name = "Confirm";
             this.Confirm.Size = new System.Drawing.Size(95, 36);
             this.Confirm.TabIndex = 5;
@@ -121,7 +123,7 @@ namespace AutofactApp
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Clear.Location = new System.Drawing.Point(332, 348);
+            this.Clear.Location = new System.Drawing.Point(321, 387);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(95, 36);
             this.Clear.TabIndex = 6;
@@ -148,11 +150,30 @@ namespace AutofactApp
             this.CategoryText.Size = new System.Drawing.Size(156, 23);
             this.CategoryText.TabIndex = 1;
             // 
+            // Tva
+            // 
+            this.Tva.AutoSize = true;
+            this.Tva.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Tva.Location = new System.Drawing.Point(270, 328);
+            this.Tva.Name = "Tva";
+            this.Tva.Size = new System.Drawing.Size(33, 21);
+            this.Tva.TabIndex = 8;
+            this.Tva.Text = "Tva";
+            // 
+            // TvaText
+            // 
+            this.TvaText.Location = new System.Drawing.Point(366, 328);
+            this.TvaText.Name = "TvaText";
+            this.TvaText.Size = new System.Drawing.Size(156, 23);
+            this.TvaText.TabIndex = 9;
+            // 
             // AjoutPrestation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 491);
+            this.Controls.Add(this.Tva);
+            this.Controls.Add(this.TvaText);
             this.Controls.Add(this.CategoryText);
             this.Controls.Add(this.BackMenu);
             this.Controls.Add(this.Confirm);
@@ -185,5 +206,7 @@ namespace AutofactApp
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button BackMenu;
         private System.Windows.Forms.ComboBox CategoryText;
+        private System.Windows.Forms.Label Tva;
+        private System.Windows.Forms.TextBox TvaText;
     }
 }
