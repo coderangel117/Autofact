@@ -62,7 +62,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="BackMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>512, 329</value>
+    <value>379, 376</value>
   </data>
   <data name="BackMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 33</value>
@@ -90,7 +90,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="AddConfirm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 329</value>
+    <value>233, 376</value>
   </data>
   <data name="AddConfirm.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 33</value>
@@ -114,7 +114,7 @@
     <value>9</value>
   </data>
   <data name="NewNomText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 38</value>
+    <value>245, 85</value>
   </data>
   <data name="NewNomText.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 23</value>
@@ -135,7 +135,7 @@
     <value>8</value>
   </data>
   <data name="NewPrenomText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 113</value>
+    <value>245, 160</value>
   </data>
   <data name="NewPrenomText.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 23</value>
@@ -162,7 +162,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="NewNom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 38</value>
+    <value>113, 85</value>
   </data>
   <data name="NewNom.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 21</value>
@@ -192,7 +192,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="NewPrenom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 115</value>
+    <value>113, 162</value>
   </data>
   <data name="NewPrenom.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 21</value>
@@ -222,7 +222,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="NewMail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 257</value>
+    <value>113, 304</value>
   </data>
   <data name="NewMail.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 21</value>
@@ -252,7 +252,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="NewTel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 177</value>
+    <value>113, 224</value>
   </data>
   <data name="NewTel.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 21</value>
@@ -276,7 +276,7 @@
     <value>2</value>
   </data>
   <data name="NewMailText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 259</value>
+    <value>245, 306</value>
   </data>
   <data name="NewMailText.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 23</value>
@@ -297,7 +297,7 @@
     <value>3</value>
   </data>
   <data name="NewTelText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 184</value>
+    <value>245, 231</value>
   </data>
   <data name="NewTelText.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 23</value>
@@ -321,7 +321,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="Clear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 329</value>
+    <value>83, 376</value>
   </data>
   <data name="Clear.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 33</value>
@@ -351,7 +351,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>598, 473</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AjoutClient</value>

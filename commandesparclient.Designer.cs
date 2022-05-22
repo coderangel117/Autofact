@@ -36,21 +36,23 @@
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectCmd = new System.Windows.Forms.DataGridView();
+            this.libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paye = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.prixht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecreation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paye = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectCmd)).BeginInit();
             this.SuspendLayout();
@@ -76,11 +78,11 @@
             this.FirstName,
             this.Telephone,
             this.Mail});
-            this.SelectClient.Location = new System.Drawing.Point(113, 155);
+            this.SelectClient.Location = new System.Drawing.Point(307, 214);
             this.SelectClient.Name = "SelectClient";
             this.SelectClient.ReadOnly = true;
             this.SelectClient.RowTemplate.Height = 25;
-            this.SelectClient.Size = new System.Drawing.Size(691, 214);
+            this.SelectClient.Size = new System.Drawing.Size(695, 214);
             this.SelectClient.TabIndex = 2;
             this.SelectClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectClient_CellContentClick);
             this.SelectClient.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectClient_RowHeaderMouseClick);
@@ -134,17 +136,72 @@
             this.quantite,
             this.tva,
             this.prixtotal});
-            this.selectCmd.Location = new System.Drawing.Point(24, 430);
+            this.selectCmd.Location = new System.Drawing.Point(200, 560);
             this.selectCmd.Name = "selectCmd";
             this.selectCmd.ReadOnly = true;
             this.selectCmd.RowTemplate.Height = 25;
-            this.selectCmd.Size = new System.Drawing.Size(948, 214);
+            this.selectCmd.Size = new System.Drawing.Size(944, 214);
             this.selectCmd.TabIndex = 3;
             this.selectCmd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // libelle
+            // 
+            this.libelle.HeaderText = "libelle";
+            this.libelle.Name = "libelle";
+            this.libelle.ReadOnly = true;
+            // 
+            // description
+            // 
+            this.description.HeaderText = "description";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            // 
+            // categorie
+            // 
+            this.categorie.HeaderText = "categorie";
+            this.categorie.Name = "categorie";
+            this.categorie.ReadOnly = true;
+            // 
+            // datecreation
+            // 
+            this.datecreation.HeaderText = "date de creation";
+            this.datecreation.Name = "datecreation";
+            this.datecreation.ReadOnly = true;
+            // 
+            // paye
+            // 
+            this.paye.HeaderText = "paye";
+            this.paye.Name = "paye";
+            this.paye.ReadOnly = true;
+            this.paye.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // prixht
+            // 
+            this.prixht.HeaderText = "prixht";
+            this.prixht.Name = "prixht";
+            this.prixht.ReadOnly = true;
+            // 
+            // quantite
+            // 
+            this.quantite.HeaderText = "quantite";
+            this.quantite.Name = "quantite";
+            this.quantite.ReadOnly = true;
+            // 
+            // tva
+            // 
+            this.tva.HeaderText = "tva";
+            this.tva.Name = "tva";
+            this.tva.ReadOnly = true;
+            // 
+            // prixtotal
+            // 
+            this.prixtotal.HeaderText = "prixtotal";
+            this.prixtotal.Name = "prixtotal";
+            this.prixtotal.ReadOnly = true;
+            // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(346, 88);
+            this.name.Location = new System.Drawing.Point(156, 236);
             this.name.Name = "name";
             this.name.ReadOnly = true;
             this.name.Size = new System.Drawing.Size(100, 23);
@@ -182,67 +239,31 @@
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // libelle
+            // label1
             // 
-            this.libelle.HeaderText = "libelle";
-            this.libelle.Name = "libelle";
-            this.libelle.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(575, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Choisissez le client";
             // 
-            // description
+            // comboBox1
             // 
-            this.description.HeaderText = "description";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
-            // 
-            // categorie
-            // 
-            this.categorie.HeaderText = "categorie";
-            this.categorie.Name = "categorie";
-            this.categorie.ReadOnly = true;
-            // 
-            // datecreation
-            // 
-            this.datecreation.HeaderText = "date de creation";
-            this.datecreation.Name = "datecreation";
-            this.datecreation.ReadOnly = true;
-            // 
-            // paye
-            // 
-            this.paye.HeaderText = "paye";
-            this.paye.Name = "paye";
-            this.paye.ReadOnly = true;
-            this.paye.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.paye.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // prixht
-            // 
-            this.prixht.HeaderText = "prixht";
-            this.prixht.Name = "prixht";
-            this.prixht.ReadOnly = true;
-            // 
-            // quantite
-            // 
-            this.quantite.HeaderText = "quantite";
-            this.quantite.Name = "quantite";
-            this.quantite.ReadOnly = true;
-            // 
-            // tva
-            // 
-            this.tva.HeaderText = "tva";
-            this.tva.Name = "tva";
-            this.tva.ReadOnly = true;
-            // 
-            // prixtotal
-            // 
-            this.prixtotal.HeaderText = "prixtotal";
-            this.prixtotal.Name = "prixtotal";
-            this.prixtotal.ReadOnly = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(242, 93);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 6;
             // 
             // commandesparclient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 763);
+            this.ClientSize = new System.Drawing.Size(1451, 815);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.name);
             this.Controls.Add(this.selectCmd);
             this.Controls.Add(this.SelectClient);
@@ -273,14 +294,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn libelle;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn categorie;
         private System.Windows.Forms.DataGridViewTextBoxColumn datecreation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paye;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn paye;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixht;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantite;
         private System.Windows.Forms.DataGridViewTextBoxColumn tva;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixtotal;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
