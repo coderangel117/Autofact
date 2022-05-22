@@ -37,13 +37,15 @@
             this.NewNom = new System.Windows.Forms.Label();
             this.LabelText = new System.Windows.Forms.TextBox();
             this.DetailsText = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TvaText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AddConfirm
             // 
             this.AddConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddConfirm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AddConfirm.Location = new System.Drawing.Point(249, 349);
+            this.AddConfirm.Location = new System.Drawing.Point(249, 422);
             this.AddConfirm.Name = "AddConfirm";
             this.AddConfirm.Size = new System.Drawing.Size(129, 33);
             this.AddConfirm.TabIndex = 5;
@@ -55,7 +57,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(66, 349);
+            this.button2.Location = new System.Drawing.Point(66, 422);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 33);
             this.button2.TabIndex = 6;
@@ -79,7 +81,7 @@
             this.NewMail.AutoSize = true;
             this.NewMail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NewMail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NewMail.Location = new System.Drawing.Point(91, 293);
+            this.NewMail.Location = new System.Drawing.Point(91, 292);
             this.NewMail.Name = "NewMail";
             this.NewMail.Size = new System.Drawing.Size(36, 21);
             this.NewMail.TabIndex = 42;
@@ -98,7 +100,7 @@
             // 
             // PriceText
             // 
-            this.PriceText.Location = new System.Drawing.Point(156, 291);
+            this.PriceText.Location = new System.Drawing.Point(156, 290);
             this.PriceText.Name = "PriceText";
             this.PriceText.Size = new System.Drawing.Size(170, 23);
             this.PriceText.TabIndex = 4;
@@ -132,11 +134,32 @@
             this.DetailsText.TabStop = false;
             this.DetailsText.Text = "";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(91, 351);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 21);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Tva";
+            // 
+            // TvaText
+            // 
+            this.TvaText.Location = new System.Drawing.Point(156, 349);
+            this.TvaText.Name = "TvaText";
+            this.TvaText.Size = new System.Drawing.Size(170, 23);
+            this.TvaText.TabIndex = 45;
+            this.TvaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ModifierPrestation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 479);
+            this.ClientSize = new System.Drawing.Size(470, 574);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TvaText);
             this.Controls.Add(this.DetailsText);
             this.Controls.Add(this.AddConfirm);
             this.Controls.Add(this.button2);
@@ -165,5 +188,7 @@
         private System.Windows.Forms.Label NewNom;
         private System.Windows.Forms.TextBox LabelText;
         private System.Windows.Forms.RichTextBox DetailsText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TvaText;
     }
 }

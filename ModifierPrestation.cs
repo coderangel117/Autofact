@@ -20,6 +20,8 @@ namespace AutofactApp
             LabelText.Text = parametres[1];
             DetailsText.Text = parametres[2];
             PriceText.Text = parametres[3];
+            TvaText.Text = parametres[4];
+
 
         }
         public ModifierPrestation()
@@ -34,16 +36,17 @@ namespace AutofactApp
 
         private void AddConfirm_Click(object sender, EventArgs e)
         {
-            if (idCustomer.Text != "" && LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "")
+            if (idCustomer.Text != "" && LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "" && TvaText.Text != "")
             {
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("update prestation set LibellePrestation=@label,Description=@details,PrixHt=@price where Idp=@id", connection);
+                MySqlCommand cmd = new MySqlCommand("update prestation set LibellePrestation=@label,Description=@details,PrixHt=@price, Tva=@tva where Idp=@id", connection);
                 cmd.Parameters.AddWithValue("@id", idCustomer.Text);
                 cmd.Parameters.AddWithValue("@label", LabelText.Text);
                 cmd.Parameters.AddWithValue("@details", DetailsText.Text);
                 cmd.Parameters.AddWithValue("@price", PriceText.Text);
+                cmd.Parameters.AddWithValue("@tva", TvaText.Text);
                 cmd.ExecuteNonQuery();
                 connection.Close();
                 new Prestations().Show();
