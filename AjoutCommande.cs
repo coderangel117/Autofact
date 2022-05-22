@@ -153,6 +153,9 @@ namespace AutofactApp
                 TotalPriceText.Text = "";
             }
         }
+        ///<summary>This a function to calculate the totalprice of a customer's command </summary>
+        /// <param name="Quantity"> Represents the object's Quantity in the command</param>
+        /// <param name="Price"> Represents the object's Price in the command</param>
         public static float CalculTotalPriceCmd(float Quantity, float Price)
         {
             return (float)(Quantity * Price * 1.2);
