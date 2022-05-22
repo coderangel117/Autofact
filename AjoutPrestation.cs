@@ -43,12 +43,14 @@ namespace AutofactApp
             string label= LabelText.Text;
             string details = DetailsText.Text;
             string price = PriceText.Text;
+            string tva = TvaText.Text;
+
 
 
             int lenlabel = label.Length;
             int lendetails = details.Length;
             int lenprice = price.Length;
-            if (category!= "" && label != "" && details != "" && price != "")
+            if (category!= "" && label != "" && details != "" && price != "" && tva != "")
             {
                 if (lendetails <32 && lenprice <32 && lenlabel <32 )
                 {
@@ -71,7 +73,7 @@ namespace AutofactApp
                         cmd.Parameters.AddWithValue("@label", label);
                         cmd.Parameters.AddWithValue("@details", details);
                         cmd.Parameters.AddWithValue("@price", price);
-                        cmd.Parameters.AddWithValue("@tva", 20);
+                        cmd.Parameters.AddWithValue("@tva", tva);
                         cmd.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show("La nouvelle prestation a bien été enregistrée");
