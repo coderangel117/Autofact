@@ -84,6 +84,8 @@ namespace AutofactApp
                 LabelText.Text = SelectServices.Rows[e.RowIndex].Cells[2].Value.ToString();
                 DetailsText.Text = SelectServices.Rows[e.RowIndex].Cells[3].Value.ToString();
                 PriceText.Text = SelectServices.Rows[e.RowIndex].Cells[4].Value.ToString();
+                TvaText.Text = SelectServices.Rows[e.RowIndex].Cells[5].Value.ToString();
+
             }
         }
 
@@ -93,13 +95,14 @@ namespace AutofactApp
             string label = LabelText.Text;
             string details = DetailsText.Text;
             string price = PriceText.Text;
-            List<string> Variable = new List<string>() { id, label, details, price };
+            string tva = TvaText.Text;
+            List<string> Variable = new List<string>() { id, label, details, price, tva};
             new ModifierPrestation(Variable).Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (IdPrestationText.Text != "" && LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "")
+            if (IdPrestationText.Text != "" && LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "" && TvaText.Text != "")
             {
                 ModifPrestation();
                 this.Hide();
@@ -109,37 +112,6 @@ namespace AutofactApp
                 MessageBox.Show("Veuillez selectionner une prestation");
             }
         }
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            IdPrestationText.Clear();
-            CategoryText.Clear();
-            LabelText.Clear();
-            DetailsText.Clear();
-            PriceText.Clear();
-        }
-
-        private void Confirm_Click(object sender, EventArgs e)
-        {
-            if (LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "")
-            {
-                string cs = "server=localhost;user=root;password=;database=autofact";
-                MySqlConnection connection = new MySqlConnection(cs);
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand("update prestation set libelle=@Label, Description=@Details, PrixHT=@price where idP=@Id", connection);
-                cmd.Parameters.AddWithValue("@Label", LabelText.Text);
-                cmd.Parameters.AddWithValue("@Details", DetailsText.Text);
-                cmd.Parameters.AddWithValue("@Price", PriceText.Text);
-                //   new ModifierPrestation().Show();
-                //  this.Hide();
-                //MessageBox.Show("Les informations de la prestations ont bien été modifiées");
-            }
-            else
-            {
-                MessageBox.Show("Vous devez saisir les informations ");
-
-            }
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

@@ -31,6 +31,12 @@ namespace AutofactApp
         {
             this.BackMenu = new System.Windows.Forms.Button();
             this.SelectServices = new System.Windows.Forms.DataGridView();
+            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddService = new System.Windows.Forms.Button();
             this.DeleteService = new System.Windows.Forms.Button();
             this.CategoryText = new System.Windows.Forms.TextBox();
@@ -42,12 +48,7 @@ namespace AutofactApp
             this.label1 = new System.Windows.Forms.Label();
             this.SearchServices = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.IdPrestation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrixHt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TvaText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SelectServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +84,48 @@ namespace AutofactApp
             this.SelectServices.TabIndex = 0;
             this.SelectServices.TabStop = false;
             this.SelectServices.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectServices_RowHeaderMouseClick);
+            // 
+            // IdPrestation
+            // 
+            this.IdPrestation.HeaderText = "IdPrestation";
+            this.IdPrestation.Name = "IdPrestation";
+            this.IdPrestation.ReadOnly = true;
+            this.IdPrestation.Visible = false;
+            // 
+            // Categorie
+            // 
+            this.Categorie.HeaderText = "Categorie";
+            this.Categorie.Name = "Categorie";
+            this.Categorie.ReadOnly = true;
+            this.Categorie.Width = 150;
+            // 
+            // Libelle
+            // 
+            this.Libelle.HeaderText = "Libelle";
+            this.Libelle.Name = "Libelle";
+            this.Libelle.ReadOnly = true;
+            this.Libelle.Width = 200;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 300;
+            // 
+            // PrixHt
+            // 
+            this.PrixHt.HeaderText = "Prix";
+            this.PrixHt.Name = "PrixHt";
+            this.PrixHt.ReadOnly = true;
+            this.PrixHt.Width = 150;
+            // 
+            // TVA
+            // 
+            this.TVA.HeaderText = "TVA";
+            this.TVA.Name = "TVA";
+            this.TVA.ReadOnly = true;
+            this.TVA.Width = 150;
             // 
             // AddService
             // 
@@ -190,53 +233,20 @@ namespace AutofactApp
             this.label2.TabIndex = 14;
             this.label2.Text = "Recherche par libelle";
             // 
-            // IdPrestation
+            // TvaText
             // 
-            this.IdPrestation.HeaderText = "IdPrestation";
-            this.IdPrestation.Name = "IdPrestation";
-            this.IdPrestation.ReadOnly = true;
-            this.IdPrestation.Visible = false;
-            // 
-            // Categorie
-            // 
-            this.Categorie.HeaderText = "Categorie";
-            this.Categorie.Name = "Categorie";
-            this.Categorie.ReadOnly = true;
-            this.Categorie.Width = 150;
-            // 
-            // Libelle
-            // 
-            this.Libelle.HeaderText = "Libelle";
-            this.Libelle.Name = "Libelle";
-            this.Libelle.ReadOnly = true;
-            this.Libelle.Width = 200;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 300;
-            // 
-            // PrixHt
-            // 
-            this.PrixHt.HeaderText = "Prix";
-            this.PrixHt.Name = "PrixHt";
-            this.PrixHt.ReadOnly = true;
-            this.PrixHt.Width = 150;
-            // 
-            // TVA
-            // 
-            this.TVA.HeaderText = "TVA";
-            this.TVA.Name = "TVA";
-            this.TVA.ReadOnly = true;
-            this.TVA.Width = 150;
+            this.TvaText.Location = new System.Drawing.Point(879, 210);
+            this.TvaText.Name = "TvaText";
+            this.TvaText.Size = new System.Drawing.Size(170, 23);
+            this.TvaText.TabIndex = 46;
+            this.TvaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Prestations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 685);
+            this.Controls.Add(this.TvaText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchServices);
             this.Controls.Add(this.label1);
@@ -280,5 +290,6 @@ namespace AutofactApp
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrixHt;
         private System.Windows.Forms.DataGridViewTextBoxColumn TVA;
+        private System.Windows.Forms.TextBox TvaText;
     }
 }
