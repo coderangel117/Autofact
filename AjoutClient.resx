@@ -62,17 +62,17 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="BackMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 45</value>
+    <value>512, 329</value>
   </data>
   <data name="BackMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 40</value>
+    <value>129, 33</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BackMenu.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="BackMenu.Text" xml:space="preserve">
-    <value>Retour au menu</value>
+    <value>Annuler</value>
   </data>
   <data name="&gt;&gt;BackMenu.Name" xml:space="preserve">
     <value>BackMenu</value>
@@ -90,10 +90,10 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="AddConfirm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 329</value>
+    <value>366, 329</value>
   </data>
   <data name="AddConfirm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 35</value>
+    <value>129, 33</value>
   </data>
   <data name="AddConfirm.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -117,7 +117,7 @@
     <value>378, 38</value>
   </data>
   <data name="NewNomText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>196, 23</value>
   </data>
   <data name="NewNomText.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -138,7 +138,7 @@
     <value>378, 113</value>
   </data>
   <data name="NewPrenomText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>196, 23</value>
   </data>
   <data name="NewPrenomText.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -279,7 +279,7 @@
     <value>378, 259</value>
   </data>
   <data name="NewMailText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>196, 23</value>
   </data>
   <data name="NewMailText.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -300,7 +300,7 @@
     <value>378, 184</value>
   </data>
   <data name="NewTelText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>196, 23</value>
   </data>
   <data name="NewTelText.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -321,16 +321,16 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="Clear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 329</value>
+    <value>216, 329</value>
   </data>
   <data name="Clear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 33</value>
+    <value>129, 33</value>
   </data>
   <data name="Clear.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="Clear.Text" xml:space="preserve">
-    <value>Clear</value>
+    <value>Effacer</value>
   </data>
   <data name="&gt;&gt;Clear.Name" xml:space="preserve">
     <value>Clear</value>

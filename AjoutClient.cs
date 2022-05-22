@@ -20,8 +20,7 @@ namespace AutofactApp
 
         private void BackMenu_Click(object sender, EventArgs e)
         {
-            Form Menu = new Menu();
-            Menu.Show();
+            new clients().Show();
             this.Hide();
         }
 
@@ -59,8 +58,7 @@ namespace AutofactApp
             {
                 MessageBox.Show("Please enter mandatory details!");
             }
-            Form Menu = new Menu();
-            Menu.Show();
+            new clients().Show();
             this.Hide();
         }
 
