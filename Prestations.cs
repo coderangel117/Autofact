@@ -119,5 +119,24 @@ namespace AutofactApp
 
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            string cs = "server=localhost;user=root;password=;database=autofact";
+            MySqlConnection connection = new MySqlConnection(cs);
+            connection.Open();
+            SelectServices.Rows.Clear();
+            MySqlCommand requete = new MySqlCommand("select * from prestation where LibellePrestation like concat('%',@libelle,'%')");
+            requete.Parameters.AddWithValue("@libelle", SearchServices.Text);
+            requete.Connection = connection;
+            MySqlDataReader reader = requete.ExecuteReader();
+            while (reader.Read())
+            {
+                Object[] values = new object[reader.FieldCount];
+                reader.GetValues(values);
+                SelectServices.Rows.Add(values);
+            }
+        }
     }
 }
