@@ -46,10 +46,8 @@ namespace AutofactApp
 
         private void AddService_Click(object sender, EventArgs e)
         {
-            Form ajoutP = new AjoutPrestation();
-            ajoutP.Show();
-            Label label1 = new Label();
-            ajoutP.Controls.Add(label1);
+            new AjoutPrestation().Show();
+            this.Hide();
         }
 
         private void UpdateService_Click(object sender, EventArgs e)
@@ -89,6 +87,28 @@ namespace AutofactApp
             }
         }
 
+        public void ModifPrestation()
+        {
+            string id = IdPrestationText.Text;
+            string label = LabelText.Text;
+            string details = DetailsText.Text;
+            string price = PriceText.Text;
+            List<string> Variable = new List<string>() { id, label, details, price };
+            new ModifierPrestation(Variable).Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (IdPrestationText.Text != "" && LabelText.Text != "" && DetailsText.Text != "" && PriceText.Text != "")
+            {
+                ModifPrestation();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionner une prestation");
+            }
+        }
         private void Clear_Click(object sender, EventArgs e)
         {
             IdPrestationText.Clear();
