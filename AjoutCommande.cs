@@ -6,6 +6,10 @@ namespace AutofactApp
 {
     public partial class AjoutCommande : Form
     {
+        public AjoutCommande(int parametre) : this()
+        {
+            idCustomer.Text = parametre.ToString();
+        }
         public AjoutCommande()
         {
             InitializeComponent();
@@ -13,7 +17,7 @@ namespace AutofactApp
 
         private void BackMenu_Click(object sender, EventArgs e)
         {
-            new Menu().Show();
+            new clients().Show();
             this.Hide();
         }
 
@@ -22,37 +26,10 @@ namespace AutofactApp
 
         }
 
-        private void SearchCustomerText_TextChanged(object sender, EventArgs e)
-        {
-            string cs = "server=localhost;user=root;password=;database=autofact";
-            MySqlConnection connection = new MySqlConnection(cs);
-            connection.Open();
-            SearchCustomerGrid.Rows.Clear();
-            MySqlCommand requete = new MySqlCommand("select * from client where nom like concat('%',@nom,'%')");
-            requete.Parameters.AddWithValue("@nom", SearchCustomerText.Text);
-            requete.Connection = connection;
-            MySqlDataReader reader = requete.ExecuteReader();
-            while (reader.Read())
-            {
-                Object[] values = new object[reader.FieldCount];
-                reader.GetValues(values);
-                SearchCustomerGrid.Rows.Add(values);
-            }
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            idCustomer.Clear();
-            NewNomText.Clear();
-            NewPrenomText.Clear();
-            NewTelText.Clear();
-            NewMailText.Clear();
-
-        }
 
         private void AddConfirm_Click(object sender, EventArgs e)
         {
-            if (NewPrenomText.Text != "" && NewNomText.Text != "" && NewMailText.Text != "" && NewTelText.Text != "" && NewLabelText.Text != "" && NewDetailsText.Text != "" && NewQuantityText.Text != "" && NewPriceText.Text != "" && selectService.Text != "")
+            if (idCustomer.Text!="" && NewLabelText.Text != "" && NewDetailsText.Text != "" && NewQuantityText.Text != "" && NewPriceText.Text != "" && selectService.Text != "")
             {
                 string DateActu = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 string cs = "server=localhost;user=root;password=;database=autofact";
@@ -73,35 +50,14 @@ namespace AutofactApp
                 int nb = cmd.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("La commande a bien été executée", "commande enregistrée", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                new clients().Show();
             }
         }
 
         private void AjoutCommande_Load(object sender, EventArgs e)
         {
-            string cs = "server=localhost;user=root;password=;database=autofact";
-            MySqlConnection connection = new MySqlConnection(cs);
-            connection.Open();
-            SearchCustomerGrid.Rows.Clear();
-            MySqlCommand requete = new MySqlCommand("select * from client");
-            requete.Connection = connection;
-            MySqlDataReader reader = requete.ExecuteReader();
 
-            while (reader.Read())
-            {
-                Object[] values = new object[reader.FieldCount];
-                reader.GetValues(values);
-                SearchCustomerGrid.Rows.Add(values);
-            }
-            connection.Close();
-        }
-
-        private void SearchCustomerGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            idCustomer.Text = SearchCustomerGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-            NewNomText.Text = SearchCustomerGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-            NewPrenomText.Text = SearchCustomerGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-            NewTelText.Text = SearchCustomerGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
-            NewMailText.Text = SearchCustomerGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void ChoiceService_Click(object sender, EventArgs e)
