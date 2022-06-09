@@ -43,13 +43,6 @@ namespace AutofactApp
             }
         }
 
-        private void Users_Click(object sender, EventArgs e)
-        {
-            Form Users = new utilisateurs();
-            Users.Show();
-            this.Hide();
-        }
-
         private void ChangeMdp_Click(object sender, EventArgs e)
         {
             new ChangementMotDePasse().Show();
@@ -61,17 +54,9 @@ namespace AutofactApp
             new Prestations().Show();
             this.Hide();
         }
-
-        private void AddCmd_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            new AjoutCommande().Show();
-            this.Hide();
-        }
-
-        private void ListCmd_Click(object sender, EventArgs e)
-        {
-            new commandesparclient().Show();
-            this.Hide();
+            new Commandes().Show();
         }
     }
 }

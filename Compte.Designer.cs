@@ -37,6 +37,7 @@
             this.ConfirmLog = new System.Windows.Forms.Button();
             this.ConfirmPassText = new System.Windows.Forms.TextBox();
             this.ConfirmPass = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // title
@@ -45,15 +46,14 @@
             this.title.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.title.Location = new System.Drawing.Point(291, 50);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(183, 28);
+            this.title.Size = new System.Drawing.Size(157, 28);
             this.title.TabIndex = 0;
-            this.title.Text = "Créez votre compte";
+            this.title.Text = "Créer un compte";
             // 
             // Passtext
             // 
             this.Passtext.Location = new System.Drawing.Point(310, 191);
             this.Passtext.Name = "Passtext";
-            this.Passtext.PasswordChar = '*';
             this.Passtext.Size = new System.Drawing.Size(188, 23);
             this.Passtext.TabIndex = 7;
             // 
@@ -88,7 +88,7 @@
             // clear
             // 
             this.clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clear.Location = new System.Drawing.Point(241, 316);
+            this.clear.Location = new System.Drawing.Point(228, 337);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(98, 37);
             this.clear.TabIndex = 10;
@@ -100,7 +100,7 @@
             // ConfirmLog
             // 
             this.ConfirmLog.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConfirmLog.Location = new System.Drawing.Point(413, 316);
+            this.ConfirmLog.Location = new System.Drawing.Point(400, 337);
             this.ConfirmLog.Name = "ConfirmLog";
             this.ConfirmLog.Size = new System.Drawing.Size(98, 37);
             this.ConfirmLog.TabIndex = 9;
@@ -113,9 +113,9 @@
             // 
             this.ConfirmPassText.Location = new System.Drawing.Point(310, 249);
             this.ConfirmPassText.Name = "ConfirmPassText";
-            this.ConfirmPassText.PasswordChar = '*';
             this.ConfirmPassText.Size = new System.Drawing.Size(188, 23);
             this.ConfirmPassText.TabIndex = 8;
+            this.ConfirmPassText.TextChanged += new System.EventHandler(this.ConfirmPassText_TextChanged);
             // 
             // ConfirmPass
             // 
@@ -127,11 +127,23 @@
             this.ConfirmPass.TabIndex = 0;
             this.ConfirmPass.Text = "Confirmer le mot de passe ";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(474, 295);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(141, 19);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Afficher les caractères";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Compte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 416);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.ConfirmPassText);
             this.Controls.Add(this.ConfirmPass);
             this.Controls.Add(this.clear);
@@ -143,6 +155,7 @@
             this.Controls.Add(this.title);
             this.Name = "Compte";
             this.Text = "Compte";
+            this.Load += new System.EventHandler(this.Compte_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +172,6 @@
         private System.Windows.Forms.Button ConfirmLog;
         private System.Windows.Forms.TextBox ConfirmPassText;
         private System.Windows.Forms.Label ConfirmPass;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

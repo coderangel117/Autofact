@@ -1,19 +1,16 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutofactApp
 {
     public partial class commandesparclient : Form
     {
-        public commandesparclient()
+        public commandesparclient(int parametre) : this()
+        {
+            name.Text = parametre.ToString();
+        }
+        public commandesparclient() 
         {
             InitializeComponent();
         }
@@ -24,37 +21,13 @@ namespace AutofactApp
             this.Hide();
         }
 
-        private void SelectClient_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void commandesparclient_Load(object sender, EventArgs e)
         {
             string cs = "server=localhost;user=root;password=;database=autofact";
             MySqlConnection connection = new MySqlConnection(cs);
             connection.Open();
-            SelectClient.Rows.Clear();
-            MySqlCommand requete = new MySqlCommand("select * from client where idC IN (select IdClient from commande)");
-            requete.Connection = connection;
-            MySqlDataReader reader = requete.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Object[] values = new object[reader.FieldCount];
-                reader.GetValues(values);
-                SelectClient.Rows.Add(values);
-            }
-        }
-
-        private void SelectClient_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            name.Text = SelectClient.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string cs = "server=localhost;user=root;password=;database=autofact";
-            MySqlConnection connection = new MySqlConnection(cs);
-            connection.Open();
             selectCmd.Rows.Clear();
-            MySqlCommand requete = new MySqlCommand(@"select prestation.LibellePrestation as libelle,
+            MySqlCommand requete = new MySqlCommand(@"select commande.IdCommande, prestation.LibellePrestation as libelle,
 prestation.Description as description, 
 categorie.LibelleCateg as categorie, 
 commande.DateCreation,
@@ -67,8 +40,8 @@ from commande
 Inner join contenir ON commande.IdCommande = contenir.IdCommande
 inner join prestation on prestation.Idp = contenir.IdPrestation
 inner join categorie ON categorie.Id = prestation.IdCateg
-where commande.IdClient = (SELECT idC from client where nom =@name);");
-            requete.Parameters.AddWithValue("@name", name.Text);
+where commande.IdClient =(select idC from client where idC=@id);");
+            requete.Parameters.AddWithValue("@id", name.Text);
             requete.Connection = connection;
             MySqlDataReader reader = requete.ExecuteReader();
 
@@ -78,11 +51,83 @@ where commande.IdClient = (SELECT idC from client where nom =@name);");
                 reader.GetValues(values);
                 selectCmd.Rows.Add(values);
             }
+            connection.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
 
+        private void BackMenu_Click_1(object sender, EventArgs e)
+        {
+            new clients().Show();
+            this.Hide();
+        }
+
+        private void selectCmd_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            checkBox1.Visible = true;
+
+            string cs = "server=localhost;user=root;password=;database=autofact";
+            MySqlConnection connection = new MySqlConnection(cs);
+            connection.Open();
+            MySqlCommand paye = new("select Paye from commande where IdCommande=@id", connection);
+            paye.Parameters.AddWithValue("@id", name.Text);
+            paye.ExecuteNonQuery();
+            string test = paye.ExecuteScalar().ToString();
+            label2.Text = test;
+
+            /*  if (checkBox1.Checked)
+              {
+                  string cs = "server=localhost;user=root;password=;database=autofact";
+                  MySqlConnection connection = new MySqlConnection(cs);
+                  connection.Open();
+                  MySqlCommand cmd = new MySqlCommand("update commande set Paye=@paye", connection);
+                  cmd.Parameters.AddWithValue("@paye", 1);
+                  cmd.ExecuteNonQuery();
+                  connection.Close();
+              }
+              else
+              {
+                  string cs = "server=localhost;user=root;password=;database=autofact";
+                  MySqlConnection connection = new MySqlConnection(cs);
+                  connection.Open();
+                  MySqlCommand cmd = new MySqlCommand("update commande set Paye=@paye ", connection);
+                  cmd.Parameters.AddWithValue("@paye", 0);
+                  cmd.ExecuteNonQuery();
+                  connection.Close();
+              }*/
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(label2.Text != "")
+            {
+                if (checkBox1.Checked)
+                {
+                    string cs = "server=localhost;user=root;password=;database=autofact";
+                    MySqlConnection connection = new MySqlConnection(cs);
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand("update commande set Paye=@paye", connection);
+                    cmd.Parameters.AddWithValue("@paye", 1);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+                else
+                {
+                    string cs = "server=localhost;user=root;password=;database=autofact";
+                    MySqlConnection connection = new MySqlConnection(cs);
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand("update commande set Paye=@paye ", connection);
+                    cmd.Parameters.AddWithValue("@paye", 0);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show(" veuillez selectionner une commande !!", "Erreur de selection de commande");
+            }
         }
     }
 }

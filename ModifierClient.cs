@@ -26,12 +26,6 @@ namespace AutofactApp
         {
             InitializeComponent();
         }
-
-        private void BackMenu_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Menu().Show();
-        }
         private void AddConfirm_Click(object sender, EventArgs e)
         {
 

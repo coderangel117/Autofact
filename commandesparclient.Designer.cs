@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.BackMenu = new System.Windows.Forms.Button();
-            this.SelectClient = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectCmd = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,8 +47,8 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).BeginInit();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.selectCmd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,67 +61,14 @@
             this.BackMenu.TabIndex = 0;
             this.BackMenu.Text = "retour au menu";
             this.BackMenu.UseVisualStyleBackColor = true;
-            this.BackMenu.Click += new System.EventHandler(this.BackMenu_Click);
-            // 
-            // SelectClient
-            // 
-            this.SelectClient.AllowUserToOrderColumns = true;
-            this.SelectClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SelectClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.LastName,
-            this.FirstName,
-            this.Telephone,
-            this.Mail});
-            this.SelectClient.Location = new System.Drawing.Point(307, 214);
-            this.SelectClient.Name = "SelectClient";
-            this.SelectClient.ReadOnly = true;
-            this.SelectClient.RowTemplate.Height = 25;
-            this.SelectClient.Size = new System.Drawing.Size(695, 214);
-            this.SelectClient.TabIndex = 2;
-            this.SelectClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectClient_CellContentClick);
-            this.SelectClient.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectClient_RowHeaderMouseClick);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "nom";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            this.LastName.Width = 150;
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "prenom";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 150;
-            // 
-            // Telephone
-            // 
-            this.Telephone.HeaderText = "telephone";
-            this.Telephone.Name = "Telephone";
-            this.Telephone.ReadOnly = true;
-            this.Telephone.Width = 150;
-            // 
-            // Mail
-            // 
-            this.Mail.HeaderText = "mail";
-            this.Mail.Name = "Mail";
-            this.Mail.ReadOnly = true;
-            this.Mail.Width = 200;
+            this.BackMenu.Click += new System.EventHandler(this.BackMenu_Click_1);
             // 
             // selectCmd
             // 
             this.selectCmd.AllowUserToOrderColumns = true;
             this.selectCmd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.selectCmd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.libelle,
             this.description,
             this.categorie,
@@ -136,13 +78,20 @@
             this.quantite,
             this.tva,
             this.prixtotal});
-            this.selectCmd.Location = new System.Drawing.Point(200, 560);
+            this.selectCmd.Location = new System.Drawing.Point(35, 178);
             this.selectCmd.Name = "selectCmd";
             this.selectCmd.ReadOnly = true;
             this.selectCmd.RowTemplate.Height = 25;
-            this.selectCmd.Size = new System.Drawing.Size(944, 214);
+            this.selectCmd.Size = new System.Drawing.Size(1049, 214);
             this.selectCmd.TabIndex = 3;
             this.selectCmd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.selectCmd.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.selectCmd_RowHeaderMouseClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // libelle
             // 
@@ -201,7 +150,7 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(156, 236);
+            this.name.Location = new System.Drawing.Point(148, 101);
             this.name.Name = "name";
             this.name.ReadOnly = true;
             this.name.Size = new System.Drawing.Size(100, 23);
@@ -242,36 +191,48 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(575, 99);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(474, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.Size = new System.Drawing.Size(248, 30);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Choisissez le client";
+            this.label1.Text = "Choisissez la commande";
             // 
-            // comboBox1
+            // checkBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(242, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 6;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(502, 416);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(242, 19);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Marquer cette commande comme payée";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(330, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
             // 
             // commandesparclient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1451, 815);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1216, 593);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.name);
             this.Controls.Add(this.selectCmd);
-            this.Controls.Add(this.SelectClient);
             this.Controls.Add(this.BackMenu);
             this.Name = "commandesparclient";
             this.Text = "commandesparclient";
             this.Load += new System.EventHandler(this.commandesparclient_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectCmd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,12 +242,6 @@
         #endregion
 
         private System.Windows.Forms.Button BackMenu;
-        private System.Windows.Forms.DataGridView SelectClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
         private System.Windows.Forms.DataGridView selectCmd;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -295,6 +250,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn libelle;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn categorie;
@@ -304,6 +261,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantite;
         private System.Windows.Forms.DataGridViewTextBoxColumn tva;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixtotal;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -131,7 +131,7 @@
             // 
             this.AddConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddConfirm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AddConfirm.Location = new System.Drawing.Point(251, 360);
+            this.AddConfirm.Location = new System.Drawing.Point(45, 359);
             this.AddConfirm.Name = "AddConfirm";
             this.AddConfirm.Size = new System.Drawing.Size(129, 33);
             this.AddConfirm.TabIndex = 32;
@@ -143,7 +143,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(45, 360);
+            this.button2.Location = new System.Drawing.Point(255, 359);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 33);
             this.button2.TabIndex = 34;
