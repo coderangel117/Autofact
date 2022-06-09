@@ -120,7 +120,6 @@ namespace AutofactApp
             this.Controls.Add(this.AddConfirm);
             this.Controls.Add(this.BackMenu);
             this.Name = "AjoutClient";
-            this.Load += new System.EventHandler(this.AjoutClient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
