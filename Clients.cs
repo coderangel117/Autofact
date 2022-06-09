@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutofactApp
@@ -35,11 +29,6 @@ namespace AutofactApp
             }
         }
 
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
         private void BackMenu_Click(object sender, EventArgs e)
         {
             new Menu().Show();
@@ -54,11 +43,26 @@ namespace AutofactApp
 
         private void SelectClient_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            AddCmd.Visible = true;
             idCustomer.Text = SelectClient.Rows[e.RowIndex].Cells[0].Value.ToString();
             NewNomText.Text = SelectClient.Rows[e.RowIndex].Cells[1].Value.ToString();
             NewPrenomText.Text = SelectClient.Rows[e.RowIndex].Cells[2].Value.ToString();
             NewTelText.Text = SelectClient.Rows[e.RowIndex].Cells[3].Value.ToString();
             NewMailText.Text = SelectClient.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+            string cs = "server=localhost;user=root;password=;database=autofact";
+            MySqlConnection connection = new MySqlConnection(cs);
+            connection.Open();
+            MySqlCommand requete = new MySqlCommand("select * from client where idC =@id and idC IN (select IdClient from commande)");
+            requete.Parameters.AddWithValue("@id", idCustomer.Text);
+            requete.Connection = connection;
+            int nb = requete.ExecuteNonQuery();
+            if (nb <10)
+            {
+                label1.Text = "true";
+                DisplayCmd.Visible = true;
+            }
+            connection.Close();
         }
         public void ModifClient()
         {
@@ -85,23 +89,32 @@ namespace AutofactApp
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (NewNomText.Text != "" && NewPrenomText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
-            { 
-            string cs = "server=localhost;user=root;password=;database=autofact";
-            MySqlConnection connection = new MySqlConnection(cs);
-            connection.Open();
-            MySqlCommand cmd = new MySqlCommand("delete from client where idC=@id", connection);
-            cmd.Parameters.AddWithValue("@id", idCustomer.Text);
-            cmd.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Le client a bien été supprimé ! ");
-            new Menu().Show();
-            this.Hide();
+            DialogResult res;
+            res = MessageBox.Show("Voulez-vous vraiment supprimer ce client ?", "Supprimer un client", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                if (NewNomText.Text != "" && NewPrenomText.Text != "" && NewTelText.Text != "" && NewMailText.Text != "")
+                {
+                    string cs = "server=localhost;user=root;password=;database=autofact";
+                    MySqlConnection connection = new MySqlConnection(cs);
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand("delete from client where idC=@id", connection);
+                    cmd.Parameters.AddWithValue("@id", idCustomer.Text);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Le client a bien été supprimé ! ");
+                    new Menu().Show();
+                    this.Hide();
 
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez selectionner un client");
+                }
             }
             else
             {
-                MessageBox.Show("Veuillez selectionner un client");
+                this.Show();
             }
         }
 
@@ -109,15 +122,6 @@ namespace AutofactApp
         {
             new AjoutClient().Show();
             this.Hide();
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            idCustomer.Clear();
-            NewNomText.Clear();
-            NewPrenomText.Clear();
-            NewTelText.Clear();
-            NewMailText.Clear();
         }
 
         private void SearchCustomer_TextChanged(object sender, EventArgs e)
@@ -136,6 +140,23 @@ namespace AutofactApp
                 reader.GetValues(values);
                 SelectClient.Rows.Add(values);
             }
+        }
+
+        private void DisplayCmd_Click(object sender, EventArgs e)
+        {
+            new commandesparclient(int.Parse(idCustomer.Text)).Show();
+            this.Hide();
+        }
+
+        private void AddCmd_Click(object sender, EventArgs e)
+        {
+            new AjoutCommande(int.Parse(idCustomer.Text)).Show();
+            this.Hide();
+        }
+
+        private void SelectClient_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

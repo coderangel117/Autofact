@@ -47,6 +47,8 @@ namespace AutofactApp
             this.button3 = new System.Windows.Forms.Button();
             this.SearchCustomer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.DisplayCmd = new System.Windows.Forms.Button();
+            this.AddCmd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SelectClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,8 +69,9 @@ namespace AutofactApp
             this.SelectClient.Name = "SelectClient";
             this.SelectClient.ReadOnly = true;
             this.SelectClient.RowTemplate.Height = 25;
-            this.SelectClient.Size = new System.Drawing.Size(994, 368);
+            this.SelectClient.Size = new System.Drawing.Size(752, 246);
             this.SelectClient.TabIndex = 1;
+            this.SelectClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectClient_CellContentClick);
             this.SelectClient.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectClient_RowHeaderMouseClick);
             // 
             // id
@@ -77,42 +80,43 @@ namespace AutofactApp
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
+            this.id.Width = 75;
             // 
             // LastName
             // 
             this.LastName.HeaderText = "nom";
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
-            this.LastName.Width = 200;
+            this.LastName.Width = 150;
             // 
             // FirstName
             // 
             this.FirstName.HeaderText = "prenom";
             this.FirstName.Name = "FirstName";
             this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 250;
+            this.FirstName.Width = 200;
             // 
             // Telephone
             // 
             this.Telephone.HeaderText = "telephone";
             this.Telephone.Name = "Telephone";
             this.Telephone.ReadOnly = true;
-            this.Telephone.Width = 200;
+            this.Telephone.Width = 150;
             // 
             // Mail
             // 
             this.Mail.HeaderText = "mail";
             this.Mail.Name = "Mail";
             this.Mail.ReadOnly = true;
-            this.Mail.Width = 300;
+            this.Mail.Width = 200;
             // 
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Title.Location = new System.Drawing.Point(560, 17);
+            this.Title.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.Location = new System.Drawing.Point(356, 34);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(146, 28);
+            this.Title.Size = new System.Drawing.Size(244, 45);
             this.Title.TabIndex = 3;
             this.Title.Text = "Liste des clients";
             // 
@@ -130,7 +134,7 @@ namespace AutofactApp
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1189, 348);
+            this.button1.Location = new System.Drawing.Point(779, 130);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 33);
             this.button1.TabIndex = 6;
@@ -141,7 +145,7 @@ namespace AutofactApp
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(1189, 404);
+            this.button2.Location = new System.Drawing.Point(779, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 33);
             this.button2.TabIndex = 7;
@@ -198,7 +202,7 @@ namespace AutofactApp
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(1189, 294);
+            this.button3.Location = new System.Drawing.Point(779, 76);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 33);
             this.button3.TabIndex = 21;
@@ -208,7 +212,7 @@ namespace AutofactApp
             // 
             // SearchCustomer
             // 
-            this.SearchCustomer.Location = new System.Drawing.Point(226, 140);
+            this.SearchCustomer.Location = new System.Drawing.Point(46, 146);
             this.SearchCustomer.Name = "SearchCustomer";
             this.SearchCustomer.Size = new System.Drawing.Size(262, 23);
             this.SearchCustomer.TabIndex = 22;
@@ -218,17 +222,43 @@ namespace AutofactApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(244, 83);
+            this.label1.Location = new System.Drawing.Point(64, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 21);
             this.label1.TabIndex = 23;
             this.label1.Text = "Rechercher un client par le nom";
             // 
+            // DisplayCmd
+            // 
+            this.DisplayCmd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayCmd.Location = new System.Drawing.Point(819, 264);
+            this.DisplayCmd.Name = "DisplayCmd";
+            this.DisplayCmd.Size = new System.Drawing.Size(134, 51);
+            this.DisplayCmd.TabIndex = 24;
+            this.DisplayCmd.Text = "Voir les commandes";
+            this.DisplayCmd.UseVisualStyleBackColor = true;
+            this.DisplayCmd.Visible = false;
+            this.DisplayCmd.Click += new System.EventHandler(this.DisplayCmd_Click);
+            // 
+            // AddCmd
+            // 
+            this.AddCmd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddCmd.Location = new System.Drawing.Point(819, 352);
+            this.AddCmd.Name = "AddCmd";
+            this.AddCmd.Size = new System.Drawing.Size(134, 51);
+            this.AddCmd.TabIndex = 25;
+            this.AddCmd.Text = "ajouter une commande";
+            this.AddCmd.UseVisualStyleBackColor = true;
+            this.AddCmd.Visible = false;
+            this.AddCmd.Click += new System.EventHandler(this.AddCmd_Click);
+            // 
             // clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 685);
+            this.ClientSize = new System.Drawing.Size(1019, 562);
+            this.Controls.Add(this.AddCmd);
+            this.Controls.Add(this.DisplayCmd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchCustomer);
             this.Controls.Add(this.button3);
@@ -270,6 +300,8 @@ namespace AutofactApp
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.Button DisplayCmd;
+        private System.Windows.Forms.Button AddCmd;
     }
 }
 
