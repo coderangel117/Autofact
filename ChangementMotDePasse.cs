@@ -21,6 +21,9 @@ namespace AutofactApp
         private void ChangementMotDePasse_Load(object sender, EventArgs e)
         {
             LoginBox.Focus();
+            AncienMdpBox.UseSystemPasswordChar = true;
+            NouveauMdpBox.UseSystemPasswordChar = true;
+            ConfirmationNouveauMdpBox.UseSystemPasswordChar = true;
         }
         private void ConfirmerChangementMdp_Click(object sender, EventArgs e)
         {
@@ -85,6 +88,22 @@ namespace AutofactApp
             Menu.Show();
             this.Hide();
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                AncienMdpBox.UseSystemPasswordChar = false;
+                NouveauMdpBox.UseSystemPasswordChar = false;
+                ConfirmationNouveauMdpBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                AncienMdpBox.UseSystemPasswordChar = true;
+                NouveauMdpBox.UseSystemPasswordChar = true;
+                ConfirmationNouveauMdpBox.UseSystemPasswordChar = true;
+            }
         }
     }
 }
