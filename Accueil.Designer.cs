@@ -67,6 +67,7 @@ namespace AutofactApp
             this.Logintext.Name = "Logintext";
             this.Logintext.Size = new System.Drawing.Size(188, 23);
             this.Logintext.TabIndex = 1;
+            this.Logintext.TextChanged += new System.EventHandler(this.Logintext_TextChanged);
             // 
             // Passtext
             // 
@@ -78,12 +79,12 @@ namespace AutofactApp
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(246, 85);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(182, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 44);
+            this.label3.Size = new System.Drawing.Size(240, 44);
             this.label3.TabIndex = 0;
-            this.label3.Text = "WELCOME";
+            this.label3.Text = "BIENVENUE";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ExitButton
@@ -166,7 +167,6 @@ namespace AutofactApp
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button ConfirmLog;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label newUser;
     }
 }

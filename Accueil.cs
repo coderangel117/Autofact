@@ -19,31 +19,30 @@ namespace AutofactApp
 
         private void ConfirmLog_Click(object sender, EventArgs e)
         {
-            string username, user_password;
-            username = Logintext.Text;
-            user_password = Passtext.Text;
+            string username = Logintext.Text;
+            string user_password = Passtext.Text;
             string passwordHashed = BCrypt.Net.BCrypt.HashPassword(user_password);
 
             if (username != "" && user_password !="" ) {
                 string cs = "server=localhost;user=root;password=;database=autofact";
                 MySqlConnection connection = new MySqlConnection(cs);
                 connection.Open();
-                MySqlCommand cmd = new("select password from utilisateur where login = @username", connection);
+                MySqlCommand cmd = new("select password from utilisateur where login=@username", connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 string mdpbdd = cmd.ExecuteScalar().ToString();
 
-                if (BCrypt.Net.BCrypt.Verify(user_password, mdpbdd))
-                {
+                    if (BCrypt.Net.BCrypt.Verify(user_password, mdpbdd))
+                    {
                     new Menu().Show();
                     this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("l'identifiant ou le mot de passe est incorrect !! ", "Erreur d'authentification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Logintext.Clear();
-                    Passtext.Clear();
-                    Logintext.Focus();
-                }
+                    }
+                    else
+                    {
+                        MessageBox.Show("le mot de passe est incorrect !! ", "Erreur d'authentification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logintext.Clear();
+                        Passtext.Clear();
+                        Logintext.Focus();
+                    }
             }
             else
             {
@@ -76,6 +75,11 @@ namespace AutofactApp
         private void newUser_Click(object sender, EventArgs e)
         {
             new Compte().Show();
+        }
+
+        private void Logintext_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
