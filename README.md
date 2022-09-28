@@ -6,7 +6,7 @@ AutoFact
 Prerequisites and Installation
 ===================================
 [download Visual Studio ](https://visualstudio.microsoft.com/fr/)  
- Istall local server like [laragon](https://laragon.org/download/)  or [wamp](https://www.wampserver.com)  
+ Install local server like [laragon](https://laragon.org/download/)  or [wamp](https://www.wampserver.com)  
     
 Unpack the folder if not already done
 Insert the folder AutoFact in the input directory of your Visual Studio (optional)  
